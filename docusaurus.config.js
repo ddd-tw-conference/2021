@@ -4,7 +4,7 @@ const baseUrl = process.env.BASE_URL || "/";
 module.exports = {
   title: "DDD TW Conference 2021",
   tagline: `Footprints of the pioneers. Let's follow the footprints of the pioneers from all over the world and "Tackling Complexity in the Heart of Software"`,
-  url: `https://conference.ddd-tw.com${baseUrl}`,
+  url: "https://conference.ddd-tw.com",
   baseUrl,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
