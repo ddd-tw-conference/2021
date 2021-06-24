@@ -23,7 +23,7 @@ import React, { memo, useCallback, useEffect, useRef, useState } from "react";
 
 const title = translate({ message: "Review 2020" });
 const description =
-  "Out first conference, DDDTW 2020, was a physical meeting that aims to promote DDD in Taiwan. Through speeches and workshops, the participants perceived that DDD is not just a technical terms but also focus on business knowledge and problem solving. Last year, over 200 people joined the conference and we got speakers from Taiwan, Europe, and China, learning how DDD is implemented all over the world.";
+  "Our first conference, DDDTW 2020, was a physical meeting that aims to promote DDD in Taiwan. Through speeches and workshops, the participants perceived that DDD is more than a technical terms, but focusing on business knowledge and problem solving. Last year, over 200 people joined the conference and we got speakers from Taiwan, Europe, and China, learning how DDD is implemented in different places.";
 
 const breakingWidth = 640;
 

@@ -42,7 +42,22 @@ function IntroCard({
       height="auto"
       bgcolor="var(--text-bg)"
     >
-      <Box overflow="hidden" sx={{ aspectRatio: "360 / 240" }}>
+      <Box
+        overflow="hidden"
+        sx={{
+          position: "relative",
+          "&:before": {
+            content: `""`,
+            paddingTop: "calc(100% * 240 / 360)",
+            float: "left",
+          },
+          "&:after": {
+            display: "block",
+            content: `""`,
+            clear: "both",
+          },
+        }}
+      >
         <Image img={img} max={width} />
       </Box>
       <Box
@@ -158,7 +173,6 @@ const cssHue = css`
 const cssBannerMain = css`
   label: Main;
   width: 100%;
-  aspect-ratio: 3900 / 2300;
   --height: max(300px, min(500px, ${bannerHeight}));
   /* max-height: min(${bannerHeight}, 500px);
   min-height: 300px; */
@@ -170,6 +184,16 @@ const cssBannerMain = css`
   position: relative;
   background-position: top center;
   background-repeat: no-repeat;
+  &:before {
+    content: "";
+    padding-top: calc(100% * 2300 / 3900);
+    float: left;
+  }
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
 `;
 
 export default function Home() {
@@ -276,7 +300,7 @@ export default function Home() {
                 <>
                   <Typography>
                     {
-                      "Domain Driven Design(hereinafter called “DDD“) Taiwan  is a DDD community that has continued to devote time and effort to promoting DDD in Taiwan."
+                      "Domain Driven Design(DDD) Taiwan  is a DDD community that has continued to devote time and effort to promoting DDD in Taiwan."
                     }
                   </Typography>
                   <Typography>
@@ -286,7 +310,7 @@ export default function Home() {
                   </Typography>
                   <Typography>
                     {
-                      "We have currently about 20 volunteers, and are growing continuously."
+                      "Until now, the community has 20 volunteers and we have hosted over 50 meetups in 2 years and keep working on increasing our influence."
                     }
                   </Typography>
                 </>
@@ -299,7 +323,7 @@ export default function Home() {
                 <>
                   <Typography>
                     {
-                      "Out first conference, DDDTW 2020, was a physical meeting that aims to promote DDD in Taiwan. Through speeches and workshops, the participants perceived that DDD is not just a technical terms but also focus on business knowledge and problem solving. Last year, over 200 people joined the conference and we got speakers from Taiwan, Europe, and China, learning how DDD is implemented all over the world."
+                      "Our first conference, DDDTW 2020, was a physical meeting that aims to promote DDD in Taiwan. Through speeches and workshops, the participants perceived that DDD is more than a technical terms, but focusing on business knowledge and problem solving. Last year, over 200 people joined the conference and we got speakers from Taiwan, Europe, and China, learning how DDD is implemented in different places."
                     }
                   </Typography>
                   <Button variant="contained" component={Link} to="/conf2020">
@@ -313,7 +337,7 @@ export default function Home() {
               title={<Translate>{"This Year"}</Translate>}
               content={
                 <Typography>
-                  {`This year, DDDTW 2021, we are going to invite more people with solid experience in practicing DDD in their works. We wish the participants could be encouraged, enlightened, and enchanted by true stories in the industries. The conference has two day, one day for offline workshops, one day for online speeches. Let's follow the footprints of the pioneers from all over the world and "Tackling Complexity in the Heart of Software".`}
+                  {`This year, DDDTW 2021, we are going to invite more people with solid experience in practicing DDD in their works. We wish the participants could be encouraged, enlightened, and enchanted by true stories in the industries. The conference has two days, one day for offline workshops, one day for online speeches. Let's follow the footprints of the pioneers from all over the world and "Tackling Complexity in the Heart of Software".`}
                 </Typography>
               }
             />
