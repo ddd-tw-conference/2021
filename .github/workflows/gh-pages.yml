@@ -27,6 +27,8 @@ jobs:
         with:
           version: 6.7.1
           run_install: true
+      - name: Set BASE URL
+        run: echo "BASE_URL="/${GITHUB_REPOSITORY##*/}/"" >> $GITHUB_ENV
       - name: Build
         run: pnpm run build
       - name: Deploy

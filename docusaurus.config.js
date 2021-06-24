@@ -1,9 +1,11 @@
+const baseUrl = process.env.BASE_URL || "/";
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "DDD TW Conference 2021",
   tagline: `Footprints of the pioneers. Let's follow the footprints of the pioneers from all over the world and "Tackling Complexity in the Heart of Software"`,
-  url: "https://conf2021.ddd-tw.com",
-  baseUrl: "/",
+  url: `https://conference.ddd-tw.com${baseUrl}`,
+  baseUrl,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
