@@ -39,7 +39,7 @@ function Footer() {
           alignItems="center"
           justifyContent="center"
         >
-          <IconButton component={A} href="mailto:dddtwconference2020@gmail.com">
+          <IconButton component={A} href="mailto:conference@ddd-tw.com">
             <Email />
           </IconButton>
           <IconButton component={A} href="https://m.me/DDDCommunity.tw">
