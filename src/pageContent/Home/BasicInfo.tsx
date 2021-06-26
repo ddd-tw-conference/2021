@@ -26,22 +26,7 @@ export default memo(function BasicInfo() {
           <Typography component="div">{"10/16 Speeches, online"}</Typography>
         </Box>
       </Box>
-      <Button
-        variant="contained"
-        disabled
-        className={css`
-          // ssr issue
-          &:disabled {
-            color: rgba(0, 0, 0, 0.3);
-            background-color: rgba(0, 0, 0, 0.12);
-
-            html[data-theme="dark"] & {
-              color: rgba(255, 255, 255, 0.3);
-              background-color: rgba(255, 255, 255, 0.12);
-            }
-          }
-        `}
-      >
+      <Button variant="contained" disabled>
         <Box display="flex" flexDirection="column">
           <Typography variant="inherit">
             <Translate>{"Join Now"}</Translate>
