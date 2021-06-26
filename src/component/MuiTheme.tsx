@@ -5,9 +5,10 @@ import React, { memo, ReactNode, useMemo } from "react";
 
 export type MuiThemeProps = {
   children?: ReactNode;
+  dark?: boolean;
 };
 
-export default memo(function MuiTheme({ children }: MuiThemeProps) {
+export default memo(function MuiTheme({ children, dark }: MuiThemeProps) {
   const { isDarkTheme } = useThemeContext();
 
   const theme = useMemo(
@@ -16,10 +17,17 @@ export default memo(function MuiTheme({ children }: MuiThemeProps) {
         ...themeConfig,
         palette: {
           ...themeConfig.palette,
-          mode: isDarkTheme ? "dark" : "light",
+          mode:
+            dark === undefined
+              ? isDarkTheme
+                ? "dark"
+                : "light"
+              : dark
+              ? "dark"
+              : "light",
         },
       }),
-    [isDarkTheme]
+    [dark, isDarkTheme]
   );
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 });

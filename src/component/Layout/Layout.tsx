@@ -1,6 +1,6 @@
 import DefaultLayout from "@theme/Layout";
 import React, { memo, ReactNode } from "react";
-import MuiTheme from "./MuiTheme";
+import MuiTheme from "../MuiTheme";
 
 /**
  * @docusaurus/theme-classic/src/theme/Layout

@@ -1,5 +1,4 @@
 import bg from "!file-loader!./bg.svg";
-import commonBg from "!file-loader!@site/src/bg/common.svg";
 import { OpenInNew } from ".pnpm/@material-ui+icons@5.0.0-alpha.37_2dfd7b75e581d7ae5b28282a038747f7/node_modules/@material-ui/icons";
 import Link from "@docusaurus/Link";
 import Translate, { translate } from "@docusaurus/Translate";
@@ -14,9 +13,9 @@ import {
   Typography,
 } from "@material-ui/core";
 import A from "@site/src/component/A";
-import Dark from "@site/src/component/Dark";
 import FootPrintsVertical from "@site/src/component/FootPrintVertical/FootPrintsVertical";
 import Layout from "@site/src/component/Layout";
+import MuiTheme from "@site/src/component/MuiTheme";
 import Rocket from "@site/src/icon/Rocket";
 import throttle from "lodash/throttle";
 import React, { memo, useCallback, useEffect, useRef, useState } from "react";
@@ -58,7 +57,6 @@ const cssIframe = css`
 
 const cssArticle = css`
   label: Article;
-  background: url(${commonBg});
   background-size: cover;
 `;
 
@@ -120,7 +118,7 @@ export default memo(() => {
   );
   return (
     <Layout title={title} description={description}>
-      <Dark>
+      <MuiTheme dark>
         <div className={cssSplash}>
           <Box pt={3} pb={18}>
             <Container
@@ -231,7 +229,7 @@ export default memo(() => {
             <FootPrintsVertical size={7} />
           </Box>
         </div>
-      </Dark>
+      </MuiTheme>
     </Layout>
   );
 });

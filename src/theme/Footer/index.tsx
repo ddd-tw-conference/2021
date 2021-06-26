@@ -1,15 +1,8 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 import { css } from "@emotion/css";
-import { Box, IconButton, Typography } from "@material-ui/core";
+import { Box, IconButton, Paper, Typography } from "@material-ui/core";
 import { Email } from "@material-ui/icons";
 import A from "@site/src/component/A";
-import Dark from "@site/src/component/Dark";
+import MuiTheme from "@site/src/component/MuiTheme";
 import FacebookIcon from "@site/src/icon/FacebookIcon";
 import FacebookSocialIcon from "@site/src/icon/FacebookSocialIcon";
 import InstagramIcon from "@site/src/icon/InstagramIcon";
@@ -20,8 +13,6 @@ import React from "react";
 
 const cssFooter = css`
   label: Footer;
-  background: var(--ifm-navbar-background-color);
-  color: var(--ifm-color-gray-100);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,8 +22,8 @@ const cssFooter = css`
 
 function Footer() {
   return (
-    <Dark>
-      <footer className={cssFooter}>
+    <MuiTheme>
+      <Paper component="footer" className={cssFooter}>
         <Box
           display="flex"
           flexWrap="wrap"
@@ -75,8 +66,8 @@ function Footer() {
             {"©2021 Domain Driven Design Taiwan. All rights reserved."}
           </Typography>
         </Box>
-      </footer>
-    </Dark>
+      </Paper>
+    </MuiTheme>
   );
 }
 
