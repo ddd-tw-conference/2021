@@ -110,7 +110,6 @@ export default memo(function Banner() {
     let cancel = false;
     setTimeout(() => {
       if (!cancel && granimInstance.current) {
-        console.log("play");
         granimInstance.current.play();
       }
     }, 300);
