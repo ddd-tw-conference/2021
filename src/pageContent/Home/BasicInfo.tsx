@@ -2,7 +2,10 @@ import Translate from "@docusaurus/Translate";
 import { css } from "@emotion/css";
 import { Box, Button, Paper, Typography } from "@material-ui/core";
 import { CalendarToday } from "@material-ui/icons";
+import useShowInView from "@site/src/hook/useShowInView";
 import React, { memo } from "react";
+import { IntersectionOptions } from "react-intersection-observer";
+import { animated } from "react-spring";
 
 const cssBasicInfo = css`
   width: fit-content;
@@ -16,9 +19,19 @@ const cssBasicInfo = css`
   justify-content: center;
 `;
 
+const useShowInViewOptions: IntersectionOptions = {
+  rootMargin: "0px",
+};
+
 export default memo(function BasicInfo() {
+  const showInView = useShowInView(useShowInViewOptions);
   return (
-    <Paper className={cssBasicInfo}>
+    <Paper
+      className={cssBasicInfo}
+      component={animated.div}
+      style={showInView.style as any}
+      ref={showInView.ref}
+    >
       <Box display="flex" gap={1} alignItems="center">
         <CalendarToday />
         <Box display="flex" flexDirection="column" gap={1}>

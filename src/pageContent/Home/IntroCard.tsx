@@ -1,9 +1,9 @@
 import { css } from "@emotion/css";
 import { Paper, Typography } from "@material-ui/core";
+import useShowInView from "@site/src/hook/useShowInView";
 import Image from "@theme/IdealImage";
 import React, { ReactNode } from "react";
-import { useInView } from "react-intersection-observer";
-import { animated, useSpring } from "react-spring";
+import { animated } from "react-spring";
 
 const width = 360;
 
@@ -66,23 +66,14 @@ export default function IntroCard({
   title?: ReactNode;
   content?: ReactNode;
 }) {
-  const { ref: refArticle, inView: inViewContent } = useInView();
-  const styleArticle = useSpring({
-    opacity: inViewContent ? 1 : 0,
-    y: inViewContent ? 0 : 16,
-  });
-
-  const { ref: refIntroCard, inView: inViewIntroCard } = useInView();
-  const styleIntroCard = useSpring({
-    opacity: inViewIntroCard ? 1 : 0,
-    y: inViewIntroCard ? 0 : 16,
-  });
+  const introCardShowInView = useShowInView();
+  const articleShowInView = useShowInView();
   return (
     <Paper
       component={animated.div}
       className={cssIntroCard}
-      style={styleIntroCard as any}
-      ref={refIntroCard}
+      style={introCardShowInView.style as any}
+      ref={introCardShowInView.ref}
     >
       <div className={cssImgBlock}>
         <div className={cssImgInner}>
@@ -90,9 +81,9 @@ export default function IntroCard({
         </div>
       </div>
       <animated.div
-        style={styleArticle}
         className={cssArticle}
-        ref={refArticle}
+        style={articleShowInView.style}
+        ref={articleShowInView.ref}
       >
         <Typography variant="h6">{title}</Typography>
         {typeof content === "string" ? (
