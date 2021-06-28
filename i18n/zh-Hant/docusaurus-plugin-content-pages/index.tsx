@@ -1,7 +1,7 @@
 import Link from "@docusaurus/Link";
 import { Button, Typography } from "@material-ui/core";
 import Home, { I18n } from "@site/src/pageContent/Home";
-import React, { memo } from "React";
+import React, { memo } from "react";
 
 const description = `DDD 年會團隊在此正式宣佈：DDDTW 領域驅動設計年會，即將於 10/15, 10/16 盛大舉辦！ 本次年會主題為：「足跡」。 「足跡」意味著過去我們學習DDD的成長過程，不管只是聽過、做過、甚至導入過，這些都將成為我們成長的養分！ 本次的年會不僅有超強的國內外卡司讓各位聽眾滿載而歸；眾所期待的「工作坊」讓你擁有實戰的體驗。`;
 

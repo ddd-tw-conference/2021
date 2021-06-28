@@ -1,7 +1,7 @@
 import Link from "@docusaurus/Link";
 import { Button, Typography } from "@material-ui/core";
 import Home, { I18n } from "@site/src/pageContent/Home";
-import React, { memo } from "React";
+import React, { memo } from "react";
 
 const description = `This year, DDDTW 2021, we are going to invite more people with solid experience in practicing DDD in their works. We wish the participants could be encouraged, enlightened, and enchanted by true stories in the industries. The conference has two days, one day for offline workshops, one day for online speeches. Let's follow the footprints of the pioneers from all over the world and "Tackling Complexity in the Heart of Software".`;
 
