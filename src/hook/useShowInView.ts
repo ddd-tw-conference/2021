@@ -6,12 +6,12 @@ import { config, useSpring, UseSpringProps } from "react-spring";
 const defaultUseInViewOptions: IntersectionOptions = {};
 
 const useShowInView = <UseSpringPropsProps extends object = any>(
-  useInViewOptions?: IntersectionOptions,
-  useSpringOptions?: UseSpringProps<UseSpringPropsProps>
+  inViewOptions?: IntersectionOptions,
+  springOptions?: (inView) => UseSpringProps<UseSpringPropsProps>
 ) => {
   const useInViewOptionsMerged: IntersectionOptions = useMemo(
-    () => merge({}, defaultUseInViewOptions, useInViewOptions),
-    [useInViewOptions]
+    () => merge({}, defaultUseInViewOptions, inViewOptions),
+    [inViewOptions]
   );
   const { ref, inView } = useInView(useInViewOptionsMerged);
   const useSpringOptionsMerged: UseSpringProps<UseSpringPropsProps> = useMemo(
@@ -24,9 +24,9 @@ const useShowInView = <UseSpringPropsProps extends object = any>(
           scale: inView ? 1 : 0.8,
           config: config.gentle,
         },
-        useSpringOptions
+        { ...(springOptions ? springOptions(inView) : null) }
       ),
-    [inView, useSpringOptions]
+    [inView, springOptions]
   );
   const style = useSpring(useSpringOptionsMerged);
   const ret = useMemo(
