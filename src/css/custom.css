@@ -7,13 +7,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #76b3b3;
-  --ifm-color-primary-dark: #5e9b9b;
-  --ifm-color-primary-darker: #2e6d6d;
-  --ifm-color-primary-darkest: 004242;
-  --ifm-color-primary-light: #8ecccc;
-  --ifm-color-primary-lighter: #8afff9;
-  --ifm-color-primary-lightest: #c0ffff;
+  --ifm-color-primary: #5e9b9b;
+  --ifm-color-primary-dark: #2e6d6d;
+  --ifm-color-primary-darker: #004242;
+  --ifm-color-primary-darkest: #001c1b;
+  --ifm-color-primary-light: #76b3b3;
+  --ifm-color-primary-lighter: #8ecccc;
+  --ifm-color-primary-lightest: #8afff9;
   --ifm-code-font-size: 95%;
   --ifm-navbar-background-color: #efefef;
   --ifm-navbar-link-color: var(--ifm-color-black);
@@ -26,9 +26,16 @@
 }
 
 html[data-theme="dark"] {
-  --body-bg: #212121;
+  --ifm-color-primary: #76b3b3;
+  --ifm-color-primary-dark: #5e9b9b;
+  --ifm-color-primary-darker: #2e6d6d;
+  --ifm-color-primary-darkest: #004242;
+  --ifm-color-primary-light: #8ecccc;
+  --ifm-color-primary-lighter: #8afff9;
+  --ifm-color-primary-lightest: #c0ffff;
   --ifm-navbar-background-color: #333333;
   --ifm-navbar-link-color: var(--ifm-color-white);
+  --body-bg: #212121;
 }
 
 html[data-theme="light"] .navbar__logo {
@@ -37,18 +44,6 @@ html[data-theme="light"] .navbar__logo {
 
 .navbar__toggle {
   color: var(--ifm-navbar-link-color);
-}
-
-.navbar__brand:hover,
-.navbar__link:hover,
-.navbar__link--active {
-  color: var(--ifm-color-primary-lighter);
-}
-
-html[data-theme="light"] .navbar__brand:hover,
-html[data-theme="light"] .navbar__link:hover,
-html[data-theme="light"] .navbar__link--active {
-  color: var(--ifm-color-primary-darker);
 }
 
 a {

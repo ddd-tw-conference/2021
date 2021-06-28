@@ -8,10 +8,7 @@ export type FootProps = FootPrintProps & {
 
 const cssBase = css`
   label: Base;
-  color: var(--ifm-color-primary-darker);
-  html[data-theme="dark"] & {
-    color: var(--ifm-color-primary);
-  }
+  color: var(--ifm-color-primary);
 `;
 
 export default memo(function Foot({ foot = "left", ...props }: FootProps) {

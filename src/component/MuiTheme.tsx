@@ -1,5 +1,4 @@
 import { createTheme, ThemeProvider } from "@material-ui/core";
-import themeConfig from "@site/src/theme";
 import useThemeContext from "@theme/hooks/useThemeContext";
 import React, { memo, ReactNode, useEffect, useMemo, useState } from "react";
 
@@ -27,10 +26,33 @@ export default memo(function MuiTheme({ children, dark }: MuiThemeProps) {
   const theme = useMemo(
     () =>
       createTheme({
-        ...themeConfig,
+        typography: {
+          fontFamily: "var(--ifm-font-family-base)",
+        },
         palette: {
-          ...themeConfig.palette,
+          primary: currentDark
+            ? {
+                light: "#76b3b3",
+                main: "#5e9b9b",
+                dark: "#2e6d6d",
+              }
+            : {
+                light: "#8ecccc",
+                main: "#76b3b3",
+                dark: "#5e9b9b",
+              },
           mode: currentDark ? "dark" : "light",
+        },
+        components: {
+          MuiButton: {
+            styleOverrides: {
+              contained: {
+                ":hover": {
+                  color: "var(--ifm-font-color-base)",
+                },
+              },
+            },
+          },
         },
       }),
     [currentDark]
