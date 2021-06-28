@@ -38,6 +38,34 @@ html[data-theme="dark"] {
   --body-bg: #212121;
 }
 
+@media (max-width: 500px) {
+  html,
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html,
+  body {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  html,
+  body {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 300px) {
+  html,
+  body {
+    font-size: 0.8rem;
+  }
+}
+
 html[data-theme="light"] .navbar__logo {
   filter: brightness(0.8);
 }

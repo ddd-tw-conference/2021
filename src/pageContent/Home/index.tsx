@@ -1,10 +1,32 @@
 import { css } from "@emotion/css";
 import { useTheme } from "@material-ui/core";
 import Layout from "@site/src/component/Layout";
-import React, { memo, useMemo } from "react";
+import React, {
+  createContext,
+  memo,
+  ReactNode,
+  useContext,
+  useMemo,
+} from "react";
 import Banner from "./Banner/Banner";
 import BasicInfo from "./BasicInfo";
 import IntroBlock from "./IntroBlock";
+
+export type I18n = {
+  description: string;
+  aboutUs: ReactNode;
+  aboutUsArticle: ReactNode;
+  pastYear: ReactNode;
+  pastYearArticle: ReactNode;
+  thisYear: ReactNode;
+  thisYearArticle: ReactNode;
+  joinNow: ReactNode;
+  comingSoon: ReactNode;
+};
+
+const I18nContext = createContext({} as I18n);
+
+export const useI18n = () => useContext(I18nContext);
 
 const cssBody = css`
   padding-top: 24px;
@@ -15,7 +37,7 @@ const cssBody = css`
   align-items: center;
 `;
 
-export default memo(function Home() {
+export default memo(function Home({ i18n }: { i18n: I18n }) {
   const theme = useTheme();
 
   const cssHome = useMemo(
@@ -27,14 +49,16 @@ export default memo(function Home() {
     [theme.breakpoints.values.lg]
   );
   return (
-    <Layout>
-      <div className={cssHome}>
-        <Banner />
-        <div className={cssBody}>
-          <BasicInfo />
-          <IntroBlock />
+    <I18nContext.Provider value={i18n}>
+      <Layout description={i18n.description}>
+        <div className={cssHome}>
+          <Banner />
+          <div className={cssBody}>
+            <BasicInfo />
+            <IntroBlock />
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </I18nContext.Provider>
   );
 });

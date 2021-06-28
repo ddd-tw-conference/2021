@@ -11,16 +11,16 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "ddd-tw-community", // Usually your GitHub org/user name.
   projectName: "2021-ddd-conference", // Usually your repo name.
-  // i18n: {
-  //   defaultLocale: "en",
-  //   locales: ["en", "zh-TW"],
-  //   localeConfigs: {
-  //     en: {
-  //       label: "English",
-  //       direction: "ltr",
-  //     },
-  //   },
-  // },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "zh-Hant"],
+    localeConfigs: {
+      en: {
+        label: "English",
+        direction: "ltr",
+      },
+    },
+  },
   themeConfig: {
     image: "img/ogImage.png",
     colorMode: {
@@ -38,10 +38,10 @@ module.exports = {
           label: "Review 2020",
           position: "right",
         },
-        // {
-        //   type: "localeDropdown",
-        //   position: "right",
-        // },
+        {
+          type: "localeDropdown",
+          position: "right",
+        },
         // { to: "/speakers", label: "講者介紹", position: "right" },
         // { to: "/agenda", label: "議程", position: "right" },
         // { to: "/workshop", label: "工作坊", position: "right" },

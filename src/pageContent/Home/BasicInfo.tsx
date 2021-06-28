@@ -1,4 +1,3 @@
-import Translate from "@docusaurus/Translate";
 import { css } from "@emotion/css";
 import { Box, Button, Paper, Typography } from "@material-ui/core";
 import { CalendarToday } from "@material-ui/icons";
@@ -6,6 +5,7 @@ import useShowInView from "@site/src/hook/useShowInView";
 import React, { memo } from "react";
 import { IntersectionOptions } from "react-intersection-observer";
 import { animated } from "react-spring";
+import { useI18n } from ".";
 
 const cssBasicInfo = css`
   width: fit-content;
@@ -24,6 +24,7 @@ const useShowInViewOptions: IntersectionOptions = {
 };
 
 export default memo(function BasicInfo() {
+  const i18n = useI18n();
   const showInView = useShowInView(useShowInViewOptions);
   return (
     <Paper
@@ -41,9 +42,7 @@ export default memo(function BasicInfo() {
       </Box>
       <Button variant="contained" disabled>
         <Box display="flex" flexDirection="column">
-          <Typography variant="inherit">
-            <Translate>{"Join Now"}</Translate>
-          </Typography>
+          <Typography variant="inherit">{i18n.joinNow}</Typography>
           <Typography
             className={css`
               font-size: 0.875em;
@@ -51,7 +50,7 @@ export default memo(function BasicInfo() {
               color: #f00;
             `}
           >
-            <Translate>{"Coming soon"}</Translate>
+            {i18n.comingSoon}
           </Typography>
         </Box>
       </Button>

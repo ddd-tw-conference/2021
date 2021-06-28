@@ -21,9 +21,9 @@ export type LayoutProps = {
   };
 };
 
-export default memo(function Layout({ children }: LayoutProps) {
+export default memo(function Layout({ children, ...props }: LayoutProps) {
   return (
-    <DefaultLayout>
+    <DefaultLayout {...props}>
       <MuiTheme>{children}</MuiTheme>
     </DefaultLayout>
   );
