@@ -25,7 +25,7 @@ jobs:
           node-version: "16"
       - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.7.1
+          version: 6.9.1
           run_install: true
       - name: Set BASE URL
         run: echo "BASE_URL="/${GITHUB_REPOSITORY##*/}/"" >> $GITHUB_ENV
