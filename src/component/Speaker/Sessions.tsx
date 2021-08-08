@@ -14,8 +14,8 @@ const cssSessions = css`
 export default memo(function Sessions({ sessions }: SessionsProps) {
   return (
     <div className={cssSessions}>
-      {sessions.map(({ to, name }) => (
-        <Session key={to} to={to} name={name} />
+      {sessions.map(({ slug, name }) => (
+        <Session key={slug} slug={slug} name={name} />
       ))}
     </div>
   );

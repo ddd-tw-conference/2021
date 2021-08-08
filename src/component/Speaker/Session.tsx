@@ -13,7 +13,7 @@ const cssLink = css`
   label: Link;
   display: flex;
   gap: 8px;
-  align-items: center;
+  align-items: baseline;
 `;
 
 export default memo(function Session({ slug, name }: SessionProps) {

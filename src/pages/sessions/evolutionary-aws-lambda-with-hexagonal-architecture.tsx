@@ -4,7 +4,7 @@ import Session from "@site/src/pageContent/sessions/evolutionary-aws-lambda-with
 import React, { memo } from "react";
 
 const i18n: SessionI18n = {
-  name: "Getting to DDD: Pragmatic or Principled?",
+  name: "Evolutionary AWS Lambda with hexagonal architecture",
   description:
     "The hexagonal architecture, or ports and adapters architecture, is an architectural pattern used for creating loosely coupled application components that can be easily connected to their software environment. This makes components exchangeable at any level, and facilitates test automation.  AWS Lambda provided the perfect environment to work with this architecture, moreover using hexagonal architecture, allows great flexibility to change the computational layer in case of porting across cloud services.",
   detail: (
