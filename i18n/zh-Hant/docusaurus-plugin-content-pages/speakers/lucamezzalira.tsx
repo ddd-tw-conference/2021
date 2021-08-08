@@ -27,7 +27,7 @@ const i18n: SpeakerI18n = {
   ),
   sessions: [
     {
-      to: "evolutionary-aws-lambda-with-hexagonal-architecture",
+      slug: "evolutionary-aws-lambda-with-hexagonal-architecture",
       name: "Evolutionary AWS Lambda with hexagonal architecture",
     },
   ],

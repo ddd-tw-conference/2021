@@ -21,7 +21,7 @@ const i18n: SpeakerI18n = {
   ),
   sessions: [
     {
-      to: "getting-to-ddd-pragmatic-or-principled",
+      slug: "getting-to-ddd-pragmatic-or-principled",
       name: "Getting to DDD: Pragmatic or Principled?",
     },
   ],
