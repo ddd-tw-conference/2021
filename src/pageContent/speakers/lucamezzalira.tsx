@@ -7,15 +7,19 @@ import React, { memo } from "react";
 const speakerCommonInfo: SpeakerCommonInfo = {
   links: [
     {
-      type: "github",
-      link: "Julielerman",
+      type: "twitter",
+      link: "lucamezzalira",
     },
     {
-      type: "about.me",
-      link: "julielerman",
+      type: "linkedin",
+      link: "lucamezzalira",
+    },
+    {
+      type: "web",
+      link: "https://lucamezzalira.com/",
     },
   ],
-  profileImage: require("@site/src/speakers/julielermanProfileImage.png"),
+  profileImage: require("@site/src/speakers/lucamezzaliraProfileImage.png"),
 };
 
 export default memo(function Page(i18n: SpeakerI18n) {

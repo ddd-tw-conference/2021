@@ -172,7 +172,11 @@ export default memo(function Speaker({
           <MuiTheme dark>
             <Container maxWidth={containerSize} className={cssBannerContainer}>
               <div className={cssBannerContent}>
-                <Typography variant="h4" component="h1">
+                <Typography
+                  variant="h4"
+                  component="h1"
+                  color="var(--ifm-color-gray-100)"
+                >
                   {name}
                 </Typography>
                 {title.length > 0 ? (

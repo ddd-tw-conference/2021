@@ -36,7 +36,7 @@ const i18n: SessionI18n = {
     {
       name: "Julie Lerman",
       slug: "julielerman",
-      image: require("@site/src/speakers/julielerman/profileImage.png"),
+      image: require("@site/src/speakers/julielermanProfileImage.png"),
     },
   ],
 };
