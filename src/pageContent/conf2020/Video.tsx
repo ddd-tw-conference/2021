@@ -1,4 +1,4 @@
-import bg from "!file-loader!./bg.svg";
+import bg from "!file-loader!@site/asset/image/bg.svg";
 import { css } from "@emotion/css";
 import { Box, Container, Tab, Tabs, TabsProps } from "@material-ui/core";
 import MuiTheme from "@site/src/component/MuiTheme";
@@ -9,7 +9,7 @@ import React, {
   useCallback,
   useEffect,
   useRef,
-  useState,
+  useState
 } from "react";
 import { useI18n } from ".";
 
