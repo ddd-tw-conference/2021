@@ -1,7 +1,9 @@
 import Link from "@docusaurus/Link";
 import { css } from "@emotion/css";
+import useToggle from "@site/src/hook/useToggle";
 import Image from "@theme/IdealImage";
 import React, { memo } from "react";
+import { animated, config, useSpring } from "react-spring";
 
 const imageSize = 64;
 
@@ -35,28 +37,39 @@ const Speaker = (() => {
     --size: ${imageSize}px;
     height: var(--size);
     width: var(--size);
+    border-radius: 50%;
+    overflow: hidden;
+    & > *,
+    & > * > *,
+    & > * > * > * {
+      height: 100%;
+      width: 100%;
+    }
     & > * {
       border-radius: 50%;
       overflow: hidden;
     }
-    & > *,
-    & > * > * {
-      height: 100%;
-      width: 100%;
-    }
-    transition: border-width 0.3s ease, transform 0.3s ease;
-    &:hover {
-      border-width: 0px;
-      transform: scale(1.1);
-    }
   `;
   return memo(function Speaker({ slug, image }: SpeakerProps) {
+    const toggle = useToggle();
+    const style = useSpring({
+      transform: toggle.active ? "scale(1.1)" : "scale(1)",
+      borderWidth: toggle.active ? 0 : 4,
+      config: config.wobbly,
+    });
     return (
-      <Link className={cssLink} to={`/speakers/${slug}`}>
+      <animated.div
+        className={cssLink}
+        style={style}
+        onMouseEnter={toggle.on}
+        onMouseLeave={toggle.off}
+      >
         <div>
-          <Image img={image} size={imageSize} height={imageSize} />
+          <Link to={`/speakers/${slug}`}>
+            <Image img={image} size={imageSize} height={imageSize} />
+          </Link>
         </div>
-      </Link>
+      </animated.div>
     );
   });
 })();
