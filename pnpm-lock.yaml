@@ -17,7 +17,6 @@ specifiers:
   '@types/react': ^17.0.11
   '@types/react-helmet': ^6.1.1
   '@types/react-router-dom': ^5.1.7
-  '@types/typed.js': ^2.0.9
   '@types/youtube': ^0.0.43
   '@typescript-eslint/eslint-plugin': ^4.28.0
   '@typescript-eslint/parser': ^4.28.0
@@ -52,7 +51,6 @@ dependencies:
   '@material-ui/icons': 5.0.0-alpha.37_2dfd7b75e581d7ae5b28282a038747f7
   '@mdx-js/react': 1.6.22_react@17.0.2
   '@svgr/webpack': 5.5.0
-  '@types/typed.js': 2.0.9
   file-loader: 6.2.0
   granim: 2.0.0
   lodash: 4.17.21
@@ -3038,13 +3036,6 @@ packages:
 
   /@types/scheduler/0.16.1:
     resolution: {integrity: sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==}
-
-  /@types/typed.js/2.0.9:
-    resolution: {integrity: sha512-3dbzeNES/FpuafOHkp0K9MAr/oDI+2ehjt7Nco0thgGq8Om4kpubqPFTQinP6qVTlAHsrX7g5IGckx1tUejw2g==}
-    deprecated: This is a stub types definition. typed.js provides its own type definitions, so you don't need this installed.
-    dependencies:
-      typed.js: 2.0.12
-    dev: false
 
   /@types/unist/2.0.3:
     resolution: {integrity: sha512-FvUupuM3rlRsRtCN+fDudtmytGO6iHJuuRKS1Ss0pG5z8oX0diNEw94UEL7hgDbpN94rgaK5R7sWm6RrSkZuAQ==}
