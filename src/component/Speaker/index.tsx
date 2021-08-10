@@ -137,6 +137,9 @@ const cssInfo = css`
 
 const cssDetail = css`
   label: Detail;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `;
 
 export default memo(function Speaker({
