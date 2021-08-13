@@ -46,6 +46,7 @@ const cssBanner = css`
   background: url(${bg});
   background-position: center;
   background-size: cover;
+  color: var(--ifm-color-gray-100);
 `;
 
 const cssBannerContainer = css`
@@ -176,11 +177,7 @@ export default memo(function Speaker({
           <MuiTheme dark>
             <Container maxWidth={containerSize} className={cssBannerContainer}>
               <div className={cssBannerContent}>
-                <Typography
-                  variant="h4"
-                  component="h1"
-                  color="var(--ifm-color-gray-100)"
-                >
+                <Typography variant="h4" component="h1" color="inherit">
                   {name}
                 </Typography>
                 {title.length > 0 ? (
