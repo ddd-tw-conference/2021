@@ -1,5 +1,5 @@
 import { IconButton } from "@material-ui/core";
-import { Language } from "@material-ui/icons";
+import { Language, Mail } from "@material-ui/icons";
 import A from "@site/src/component/A";
 import AboutMeIcon from "@site/src/icon/AboutMeIcon";
 import FacebookIcon from "@site/src/icon/FacebookIcon";
@@ -17,6 +17,7 @@ export type LinkProps = {
     | "youtube"
     | "twitter"
     | "linkedin"
+    | "email"
     | "web";
   link: string;
 };
@@ -53,6 +54,11 @@ export default memo(function Link({ type, link }: LinkProps) {
         return {
           href: `https://www.linkedin.com/in/${link}`,
           Icon: LinkedinIcon,
+        };
+      case "email":
+        return {
+          href: `mailto:${link}`,
+          Icon: Mail,
         };
       case "web":
         return {
