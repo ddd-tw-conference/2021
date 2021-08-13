@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 import React, { memo } from "react";
 import MuiTheme from "../MuiTheme";
 import type { BeforeSessionArrProps } from "./BeforeSessionArr";
+import BeforeSessionArr from "./BeforeSessionArr";
 import type { GuestsProps } from "./Guests";
 import Guests from "./Guests";
 
@@ -69,6 +70,7 @@ export default memo(function ({
       </div>
       <Container maxWidth="md">
         <div className={cssDetail}>{detail}</div>
+        <BeforeSessionArr links={beforeSession} />
       </Container>
     </Layout>
   );

@@ -40,6 +40,50 @@ const speakers: SpeakerProps[] = [
     slug: "kenny_baas",
     image: require("@site/src/speakers/kenny_baasProfileImage.png"),
   },
+  {
+    slug: "teddy.chen.tw",
+    image: require("@site/src/speakers/teddy.chen.twProfileImage.png"),
+  },
+  {
+    slug: "kojenchieh",
+    image: require("@site/src/speakers/kojenchiehProfileImage.png"),
+  },
+  {
+    slug: "rexwang",
+    image: require("@site/src/speakers/rexwangProfileImage.png"),
+  },
+  {
+    slug: "brucezhang",
+    image: require("@site/src/speakers/brucezhangProfileImage.png"),
+  },
+  // {
+  //   slug: "weiwangdavid",
+  //   image: require("@site/src/speakers/weiwangdavidProfileImage.png"),
+  // },
+  // {
+  //   slug: "kangjiangmei",
+  //   image: require("@site/src/speakers/kangjiangmeiProfileImage.png"),
+  // },
+  // {
+  //   slug: "kimkao",
+  //   image: require("@site/src/speakers/kimkaoProfileImage.png"),
+  // },
+  // {
+  //   slug: "fong1143",
+  //   image: require("@site/src/speakers/fong1143ProfileImage.png"),
+  // },
+  // {
+  //   slug: "twbenlu",
+  //   image: require("@site/src/speakers/twbenluProfileImage.png"),
+  // },
+  // {
+  //   slug: "wcre1107",
+  //   image: require("@site/src/speakers/wcre1107ProfileImage.png"),
+  // },
+  // {
+  //   slug: "herchg",
+  //   image: require("@site/src/speakers/herchgProfileImage.png"),
+  // },
 ];
 
 type SpeakerProps = {

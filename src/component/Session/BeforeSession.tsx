@@ -1,3 +1,4 @@
+import { Typography } from "@material-ui/core";
 import A from "@site/src/component/A";
 import React, { memo } from "react";
 
@@ -8,8 +9,8 @@ export type BeforeSessionProps = {
 
 export default memo(function BeforeSession({ name, link }: BeforeSessionProps) {
   return (
-    <li>
+    <Typography component="li">
       <A href={link}>{name}</A>
-    </li>
+    </Typography>
   );
 });

@@ -2,7 +2,9 @@ import { IconButton } from "@material-ui/core";
 import { Language, Mail } from "@material-ui/icons";
 import A from "@site/src/component/A";
 import AboutMeIcon from "@site/src/icon/AboutMeIcon";
+import BloggerIcon from "@site/src/icon/BloggerIcon";
 import FacebookIcon from "@site/src/icon/FacebookIcon";
+import FacebookSocialIcon from "@site/src/icon/FacebookSocialIcon";
 import GithubIcon from "@site/src/icon/GithubIcon";
 import LinkedinIcon from "@site/src/icon/LinkedinIcon";
 import TwitterIcon from "@site/src/icon/TwitterIcon";
@@ -13,11 +15,13 @@ export type LinkProps = {
   type:
     | "about.me"
     | "facebook"
+    | "facebookgroup"
     | "github"
     | "youtube"
     | "twitter"
     | "linkedin"
     | "email"
+    | "blogger"
     | "web";
   link: string;
 };
@@ -34,6 +38,11 @@ export default memo(function Link({ type, link }: LinkProps) {
         return {
           href: `https://fb.me/${link}`,
           Icon: FacebookIcon,
+        };
+      case "facebookgroup":
+        return {
+          href: `https://www.facebook.com/groups/${link}`,
+          Icon: FacebookSocialIcon,
         };
       case "github":
         return {
@@ -59,6 +68,11 @@ export default memo(function Link({ type, link }: LinkProps) {
         return {
           href: `mailto:${link}`,
           Icon: Mail,
+        };
+      case "blogger":
+        return {
+          href: `https://${link}.blogspot.com/`,
+          Icon: BloggerIcon,
         };
       case "web":
         return {
