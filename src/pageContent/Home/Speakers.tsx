@@ -28,6 +28,10 @@ const speakers: SpeakerProps[] = [
     slug: "hofstef",
     image: require("@site/src/speakers/hofstefProfileImage.png"),
   },
+  {
+    slug: "adymitruk",
+    image: require("@site/src/speakers/adymitrukProfileImage.png"),
+  },
 ];
 
 type SpeakerProps = {

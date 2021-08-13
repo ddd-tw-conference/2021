@@ -164,7 +164,6 @@ export default memo(function Speaker({
       startDelay: 300,
       backDelay: 1000,
       typeSpeed: 60,
-      contentType: null,
     });
     return () => {
       typed.destroy();
