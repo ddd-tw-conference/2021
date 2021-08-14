@@ -30,9 +30,9 @@ const cssImg = css`
   width: ${imageSize}px;
   overflow: hidden;
   border-radius: 50%;
-  border-width: 4px;
+  border-width: 2px;
   border-style: solid;
-  border-color: var(--ifm-background-color);
+  border-color: currentColor;
   & > * {
     height: 100%;
     width: 100%;

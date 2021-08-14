@@ -28,6 +28,7 @@ const cssTitle = css`
   background: url(${bg});
   background-size: cover;
   background-position: center;
+  color: var(--ifm-color-gray-100);
 `;
 
 const cssContainer = css`
@@ -57,11 +58,7 @@ export default memo(function ({
       <div className={cssTitle}>
         <MuiTheme dark>
           <Container maxWidth="md" className={cssContainer}>
-            <Typography
-              variant="h4"
-              component="h1"
-              color="var(--ifm-color-gray-100)"
-            >
+            <Typography variant="h4" component="h1" color="inherit">
               {name}
             </Typography>
             {<Guests guests={guests} />}
