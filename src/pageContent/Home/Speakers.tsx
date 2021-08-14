@@ -64,10 +64,10 @@ const speakers: SpeakerProps[] = [
     slug: "kangjiangmei",
     image: require("@site/src/speakers/kangjiangmeiProfileImage.png"),
   },
-  // {
-  //   slug: "kimkao",
-  //   image: require("@site/src/speakers/kimkaoProfileImage.png"),
-  // },
+  {
+    slug: "kimkao",
+    image: require("@site/src/speakers/kimkaoProfileImage.png"),
+  },
   // {
   //   slug: "fong1143",
   //   image: require("@site/src/speakers/fong1143ProfileImage.png"),

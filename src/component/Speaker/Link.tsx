@@ -6,7 +6,9 @@ import BloggerIcon from "@site/src/icon/BloggerIcon";
 import FacebookIcon from "@site/src/icon/FacebookIcon";
 import FacebookSocialIcon from "@site/src/icon/FacebookSocialIcon";
 import GithubIcon from "@site/src/icon/GithubIcon";
+import InstagramIcon from "@site/src/icon/InstagramIcon";
 import LinkedinIcon from "@site/src/icon/LinkedinIcon";
+import MediumIcon from "@site/src/icon/MediumIcon";
 import TwitterIcon from "@site/src/icon/TwitterIcon";
 import YouTubeIcon from "@site/src/icon/YouTubeIcon";
 import React, { memo, useMemo } from "react";
@@ -16,12 +18,14 @@ export type LinkProps = {
     | "about.me"
     | "facebook"
     | "facebookgroup"
+    | "instagram"
     | "github"
     | "youtube"
     | "twitter"
     | "linkedin"
     | "email"
     | "blogger"
+    | "medium"
     | "web";
   link: string;
 };
@@ -43,6 +47,11 @@ export default memo(function Link({ type, link }: LinkProps) {
         return {
           href: `https://www.facebook.com/groups/${link}`,
           Icon: FacebookSocialIcon,
+        };
+      case "instagram":
+        return {
+          href: `https://www.instagram.com/${link}/`,
+          Icon: InstagramIcon,
         };
       case "github":
         return {
@@ -73,6 +82,11 @@ export default memo(function Link({ type, link }: LinkProps) {
         return {
           href: `https://${link}.blogspot.com/`,
           Icon: BloggerIcon,
+        };
+      case "medium":
+        return {
+          href: `https://${link}.medium.com/`,
+          Icon: MediumIcon,
         };
       case "web":
         return {
