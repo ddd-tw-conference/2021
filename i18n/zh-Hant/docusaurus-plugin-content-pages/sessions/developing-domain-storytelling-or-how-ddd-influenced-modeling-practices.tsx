@@ -6,8 +6,7 @@ import React, { memo } from "react";
 
 const i18n: SessionI18n = {
   name: "領域故事匯 or DDD 如何影響建模實作",
-  description:
-    "Domain Storytelling 是一種建模技術，可將領域知識轉化為符合業務需求的軟體。領域專家和軟件開發人員通過講故事和將它們繪製成易於理解的圖畫來相互學習。這些圖畫有助於找到 Bounded Context、導出需求和設計領域模型。",
+  description: "瞭解一種將領域知識轉化為有效商業軟體的協作建模技術。",
   detail: (
     <>
       <Typography>

@@ -7,7 +7,7 @@ const i18n: SpeakerI18n = {
   name: "Dr. Stefan Hofer",
   title: ["Requirements & DDD Expert bei WPS"],
   description:
-    "Stefan Hofer helps teams develop software that does the right job the right way. He holds a PhD in computer science, and works as an requirements and Domain-Driven Design expert for WPS – Workplace Solutions in Hamburg, Germany. His book “Domain Storytelling: A Collaborative, Visual, and Agile Way to Build Domain-Driven Software” will be published by Addison-Wesley in October 2021.",
+    "Stefan is a DDD and software requirements expert – two topics he writes about in his book “Domain Storytelling”.",
   detail: (
     <Typography>
       {
