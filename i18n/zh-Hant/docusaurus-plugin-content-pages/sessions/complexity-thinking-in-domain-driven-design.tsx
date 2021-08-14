@@ -4,31 +4,31 @@ import Session from "@site/src/pageContent/sessions/a-practical-guide-for-domain
 import React, { memo } from "react";
 
 const i18n: SessionI18n = {
-  name: "领域驱动设计中的复杂性思维",
-  description: `在软件开发过程中，领域驱动设计可以帮助我们解决复杂领域建模这一核心问题。如何利用好领域驱动设计，以及判断一个方法是否和领域驱动设计遵循了同样的原则，我们需要重新审视复杂问题本身。在本演讲中，讲师将带领听众，重新梳理复杂性思考的各种方法流派，也将着重介绍利用“Cynefin Dynamics”来修正我们在使用领域驱动设计方法的过程中所遇到的问题。`,
+  name: "領域驅動設計中的複雜性思維",
+  description: `在軟體開發過程中，領域驅動設計可以幫助我們解決複雜領域建模這一核心問題。如何利用好領域驅動設計，以及判斷一個方法是否和領域驅動設計遵循了同樣的原則，我們需要重新審視複雜問題本身。在本演講中，講師將帶領聽眾，重新梳理複雜性思考的各種方法流派，也將著重介紹利用“Cynefin Dynamics”來修正我們在使用領域驅動設計方法的過程中所遇到的問題。`,
   detail: (
     <>
       <Typography>
-        {`在软件开发过程中，领域驱动设计可以帮助我们解决复杂领域建模这一核心问题。如何利用好领域驱动设计，以及判断一个方法是否和领域驱动设计遵循了同样的原则，我们需要重新审视复杂问题本身。在本演讲中，讲师将带领听众，重新梳理复杂性思考的各种方法流派，也将着重介绍利用“Cynefin Dynamics”来修正我们在使用领域驱动设计方法的过程中所遇到的问题。`}
+        {`在軟體開發過程中，領域驅動設計可以幫助我們解決複雜領域建模這一核心問題。如何利用好領域驅動設計，以及判斷一個方法是否和領域驅動設計遵循了同樣的原則，我們需要重新審視複雜問題本身。在本演講中，講師將帶領聽眾，重新梳理複雜性思考的各種方法流派，也將著重介紹利用“Cynefin Dynamics”來修正我們在使用領域驅動設計方法的過程中所遇到的問題。`}
       </Typography>
       <ol>
-        <Typography component="li">{"认知论和复杂性思考"}</Typography>
-        <Typography component="li">{"架构设计的复杂性"}</Typography>
+        <Typography component="li">{"認知論和復雜性思考"}</Typography>
+        <Typography component="li">{"架構設計的複雜性"}</Typography>
         <Typography component="li">{"Cynefin Dynamics框架"}</Typography>
         <Typography component="li">
-          {"利用Cynefin Dynamics来设计DDD的实践过程"}
+          {"利用Cynefin Dynamics來設計DDD的實踐過程"}
         </Typography>
       </ol>
       <Typography variant="h5" component="h2">
         {"預期聽眾學習成果"}
       </Typography>
       <ol>
-        <Typography component="li">{"了解复杂性思考的方法体系"}</Typography>
+        <Typography component="li">{"了解複雜性思考的方法體系"}</Typography>
         <Typography component="li">
           {"了解Cynefin Dynamics框架及其作用"}
         </Typography>
         <Typography component="li">
-          {"掌握如何使用Cynefin Dynamics来实践DDD"}
+          {"掌握如何使用Cynefin Dynamics來實踐DDD"}
         </Typography>
       </ol>
     </>

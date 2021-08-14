@@ -4,44 +4,44 @@ import Session from "@site/src/pageContent/sessions/a-practical-guide-for-domain
 import React, { memo } from "react";
 
 const i18n: SessionI18n = {
-  name: "领域驱动设计团队实践指南",
+  name: "領域驅動設計團隊實踐指南",
   description:
-    "如果DDD只为提升个人技能，则DDD将很难在团队实践成功，除了技能的原因，团队成员的协作、遵守的纪律、实施的过程都会干扰和影响DDD的落地实施。本演讲主题将针对这一问题，结合具体的实施案例提出面向团队的领域驱动设计实践指南，降低团队实施DDD的门槛，保证DDD实施的成功率。",
+    "如果DDD只為提升個人技能，則DDD將很難在團隊實踐成功，除了技能的原因，團隊成員的協作、遵守的紀律、實施的過程都會干擾和影響DDD的落地實施。本演講主題將針對這一問題，結合具體的實施案例提出面向團隊的領域驅動設計實踐指南，降低團隊實施DDD的門檻，保證DDD實施的成功率。",
   detail: (
     <>
       <Typography>
         {
-          "如果DDD只为提升个人技能，则DDD将很难在团队实践成功，除了技能的原因，团队成员的协作、遵守的纪律、实施的过程都会干扰和影响DDD的落地实施。本演讲主题将针对这一问题，结合具体的实施案例提出面向团队的领域驱动设计实践指南，降低团队实施DDD的门槛，保证DDD实施的成功率。"
+          "如果DDD只為提升個人技能，則DDD將很難在團隊實踐成功，除了技能的原因，團隊成員的協作、遵守的紀律、實施的過程都會干擾和影響DDD的落地實施。本演講主題將針對這一問題，結合具體的實施案例提出面向團隊的領域驅動設計實踐指南，降低團隊實施DDD的門檻，保證DDD實施的成功率。"
         }
       </Typography>
       <Typography>
         {
-          "本演讲将DDD的设计模式、实施过程与敏捷迭代开发、流程进度管控、需求分析管理、团队角色协作结合起来，通过定义领域驱动设计统一过程，给出团队实践DDD的参考指南、最佳实践、团队纪律与交付物模板。"
+          "本演講將DDD的設計模式、實施過程與敏捷迭代開發、流程進度管控、需求分析管理、團隊角色協作結合起來，通過定義領域驅動設計統一過程，給出團隊實踐DDD的參考指南、最佳實踐、團隊紀律與交付物模板。"
         }
       </Typography>
-      <Typography>{"演讲分为"}</Typography>
+      <Typography>{"演講分為"}</Typography>
       <ol>
-        <Typography component="li">{"DDD成功实施的必要条件"}</Typography>
-        <Typography component="li">{"领域驱动设计统一过程"}</Typography>
-        <Typography component="li">{"业务服务驱动的分析设计方法"}</Typography>
-        <Typography component="li">{"领域驱动设计过程交付物"}</Typography>
-        <Typography component="li">{"领域驱动设计团队纪律"}</Typography>
+        <Typography component="li">{"DDD成功實施的必要條件"}</Typography>
+        <Typography component="li">{"領域驅動設計統一過程"}</Typography>
+        <Typography component="li">{"業務服務驅動的分析設計方法"}</Typography>
+        <Typography component="li">{"領域驅動設計過程交付物"}</Typography>
+        <Typography component="li">{"領域驅動設計團隊紀律"}</Typography>
       </ol>
       <Typography variant="h5" component="h2">
         {"預期聽眾學習成果"}
       </Typography>
       <ol>
         <Typography component="li">
-          {"掌握领域驱动设计的团队实施过程"}
+          {"掌握領域驅動設計的團隊實施過程"}
         </Typography>
         <Typography component="li">
-          {"掌握以业务服务为基本业务单元的需求分析方法"}
+          {"掌握以業務服務為基本業務單元的需求分析方法"}
         </Typography>
         <Typography component="li">
-          {"了解一种能够降低团队实施DDD难度的设计方法"}
+          {"了解一種能夠降低團隊實施DDD難度的設計方法"}
         </Typography>
         <Typography component="li">
-          {"了解成功实施该过程方法的业界案例"}
+          {"了解成功實施該過程方法的業界案例"}
         </Typography>
       </ol>
     </>
