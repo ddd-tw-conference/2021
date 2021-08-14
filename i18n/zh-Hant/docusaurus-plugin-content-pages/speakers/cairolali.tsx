@@ -5,20 +5,20 @@ import React, { memo } from "react";
 
 const i18n: SpeakerI18n = {
   name: "Dr. Carola Lilienthal",
-  title: [],
+  title: ["研討會講者", "作家", "熱愛於改進的軟體架構師"],
   description:
-    "Dr. Carola Lilienthal is managing software architect at WPS - Workplace Solutions and has been developing software architectures according to the principles of Domain Driven Design with her teams for more than 15 years.",
+    "Carola Lilienthal 博士是 WPS - Workplace Solutions 的管理軟體架構師，15 年來她一直和她的團隊根據領域驅動設計的原則開發軟體架構。",
   detail: (
     <Typography>
       {
-        "Dr. Carola Lilienthal is managing software architect at WPS - Workplace Solutions and has been developing software architectures according to the principles of Domain Driven Design with her teams for more than 15 years."
+        "Carola Lilienthal 博士是 WPS - Workplace Solutions 的管理軟體架構師，15 年來她一直和她的團隊根據領域驅動設計的原則開發軟體架構。"
       }
     </Typography>
   ),
   sessions: [
     {
       slug: "it-s-all-about-the-domain-honey-experiences-from-15-years-of-domain-driven-design",
-      name: "It’s all about the domain, honey ! Experiences from 15 years of Domain-Driven Design",
+      name: "關乎於領域，親愛的！ 我在領域驅動設計15 年當中的經驗",
     },
   ],
   ogImage: undefined,

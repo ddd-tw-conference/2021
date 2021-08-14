@@ -5,7 +5,11 @@ import React, { memo } from "react";
 
 const i18n: SpeakerI18n = {
   name: "Dr. Carola Lilienthal",
-  title: [],
+  title: [
+    "conference speaker",
+    "author",
+    "software architect who loves to improve",
+  ],
   description:
     "Dr. Carola Lilienthal is managing software architect at WPS - Workplace Solutions and has been developing software architectures according to the principles of Domain Driven Design with her teams for more than 15 years.",
   detail: (
