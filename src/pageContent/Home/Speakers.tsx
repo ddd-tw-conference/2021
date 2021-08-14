@@ -21,10 +21,6 @@ const speakers: SpeakerProps[] = [
     image: require("@site/src/speakers/cairolaliProfileImage.png"),
   },
   {
-    slug: "2954201",
-    image: require("@site/src/speakers/2954201ProfileImage.png"),
-  },
-  {
     slug: "hofstef",
     image: require("@site/src/speakers/hofstefProfileImage.png"),
   },
@@ -72,10 +68,14 @@ const speakers: SpeakerProps[] = [
     slug: "fong1143",
     image: require("@site/src/speakers/fong1143ProfileImage.png"),
   },
-  // {
-  //   slug: "twbenlu",
-  //   image: require("@site/src/speakers/twbenluProfileImage.png"),
-  // },
+  {
+    slug: "2954201",
+    image: require("@site/src/speakers/2954201ProfileImage.png"),
+  },
+  {
+    slug: "twbenlu",
+    image: require("@site/src/speakers/twbenluProfileImage.png"),
+  },
   // {
   //   slug: "wcre1107",
   //   image: require("@site/src/speakers/wcre1107ProfileImage.png"),
