@@ -5,7 +5,7 @@ import React, { memo } from "react";
 
 const i18n: SpeakerI18n = {
   name: "高翊凱",
-  title: ["問題排除者", "人生已被良好架構的三寶爸"],
+  title: ["AWS 資深解決方案架構師", "人生已被良好架構的三寶爸", "問題排除者"],
   description:
     "人生已經被良好架構的三寶爸，現任職於 AWS 擔任資深解決方案架構師。",
   detail: (
