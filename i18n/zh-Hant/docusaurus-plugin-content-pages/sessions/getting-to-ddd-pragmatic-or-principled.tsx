@@ -6,12 +6,12 @@ import React, { memo } from "react";
 const i18n: SessionI18n = {
   name: "Getting to DDD: Pragmatic or Principled?",
   description:
-    "Domain-Driven Design is a vast topic. There are so many wonderful concepts, philosophies, patterns, practices and techniques to learn and benefit from. Some of the best minds in the industry have been tuning these practices for years to ensure developers are able to implement proven, successful approaches to software design. Domain modeling in particular is very specific with guidance on designing and coordinating the dance between the myriad moving parts in our system. Yet learning the principals of DDD can be daunting for developers who are new to DDD. To encourage and enable more developers to get on the path of DDD, is it reasonable to allow a more pragmatic approach over a principled approach of adhering strictly to DDD guidelines? Should developers be encouraged to start with low hanging fruit which they can quickly benefit from in their software projects while they continue to learn, to gain a deeper understanding of Domain-Driven Design in order to evolve and adapt their practices as they move closer and closer to the beauty we all know that can be achieved with DDD.",
+    "DDD 是一個很大的議題。 但是，您不必成為端到端專家即可受益。 我們將研究學習 DDD 的方法，以便您在不斷學習的同時隨時可以開始。",
   detail: (
     <>
       <Typography>
         {
-          "Domain-Driven Design is a vast topic. There are so many wonderful concepts, philosophies, patterns, practices and techniques to learn and benefit from. Some of the best minds in the industry have been tuning these practices for years to ensure developers are able to implement proven, successful approaches to software design. Domain modeling in particular is very specific with guidance on designing and coordinating the dance between the myriad moving parts in our system. Yet learning the principals of DDD can be daunting for developers who are new to DDD. To encourage and enable more developers to get on the path of DDD, is it reasonable to allow a more pragmatic approach over a principled approach of adhering strictly to DDD guidelines? Should developers be encouraged to start with low hanging fruit which they can quickly benefit from in their software projects while they continue to learn, to gain a deeper understanding of Domain-Driven Design in order to evolve and adapt their practices as they move closer and closer to the beauty we all know that can be achieved with DDD."
+          "領域驅動設計是一個很大的議題。有許多美妙的概念、哲學、模式、實踐和技術可供學習和受益。多年來，業內一些最優秀的人才一直在調整這些實踐，以確保開發人員能夠實施經過驗證的、成功的軟體設計方法。特別是領域建模非常具體，指導設計和協調我們系統中無數移動部件之間交織的舞蹈。然而，對於剛接觸 DDD 的開發人員來說，學習 DDD 的原理可能令人生畏。為了鼓勵和讓更多的開發者走上 DDD 的道路，允許一種更務實的方法而不是嚴格遵守 DDD 指南的原則性方法是否合理？是否應該鼓勵開發人員從低矮的果實開始，他們可以在繼續學習的同時迅速從他們的軟件項目中受益，來獲得對領域驅動設計的更深入的理解，以便隨著他們越來越近地發展和適應他們的實踐，直到我們都知道可以用 DDD 來實現她的美。"
         }
       </Typography>
       <Typography variant="h5" component="h2">
@@ -20,7 +20,7 @@ const i18n: SessionI18n = {
       <ul>
         <Typography component="li">
           {
-            "You can benefit from individual ideas from DDD without being an end-to-end expert."
+            "您可以從 DDD 的個人想法中受益，而無需成為端到端專家。您將學習更有效的方法來幫助您的團隊理解、好奇並希望接受 DDD。"
           }
         </Typography>
         <Typography component="li">

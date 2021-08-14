@@ -14,6 +14,26 @@ const speakerCommonInfo: SpeakerCommonInfo = {
       type: "about.me",
       link: "julielerman",
     },
+    {
+      type: "twitter",
+      link: "julielerman",
+    },
+    {
+      type: "web",
+      link: "http://thedatafarm.com/",
+    },
+    {
+      type: "github",
+      link: "julielerman",
+    },
+    {
+      type: "pluralsight",
+      link: "julie-lerman",
+    },
+    {
+      type: "pluralsightcourses",
+      link: "fundamentals-domain-driven-design",
+    },
   ],
   profileImage: require("@site/src/speakers/julielermanProfileImage.png"),
 };

@@ -12,7 +12,7 @@ const i18n: SpeakerI18n = {
     escape("Conference Keynote & Tech Speaker"),
   ],
   description:
-    "Julie is known for combining experience with compassion to help software teams benefit from the guidance provided by Domain-Driven Design. She is a software coach with decades of coding and software design experience. She has a long history of helping developers expand their skills and confidence through her books, articles, Pluralsight courses, conference speaking and working closely with clients.",
+    "Julie Lerman draws on her decades of experience to coach software team around the world helping them modernize their legacy software using DDD practices.",
   detail: (
     <Typography>
       {

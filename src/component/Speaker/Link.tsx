@@ -9,6 +9,7 @@ import GithubIcon from "@site/src/icon/GithubIcon";
 import InstagramIcon from "@site/src/icon/InstagramIcon";
 import LinkedinIcon from "@site/src/icon/LinkedinIcon";
 import MediumIcon from "@site/src/icon/MediumIcon";
+import PluralsightIcon from "@site/src/icon/PluralsightIcon";
 import TwitterIcon from "@site/src/icon/TwitterIcon";
 import YouTubeIcon from "@site/src/icon/YouTubeIcon";
 import React, { memo, useMemo } from "react";
@@ -26,6 +27,8 @@ export type LinkProps = {
     | "email"
     | "blogger"
     | "medium"
+    | "pluralsight"
+    | "pluralsightcourses"
     | "web";
   link: string;
 };
@@ -87,6 +90,16 @@ export default memo(function Link({ type, link }: LinkProps) {
         return {
           href: `https://${link}.medium.com/`,
           Icon: MediumIcon,
+        };
+      case "pluralsight":
+        return {
+          href: `https://app.pluralsight.com/profile/author/${link}`,
+          Icon: PluralsightIcon,
+        };
+      case "pluralsightcourses":
+        return {
+          href: `https://www.pluralsight.com/courses/${link}`,
+          Icon: PluralsightIcon,
         };
       case "web":
         return {
