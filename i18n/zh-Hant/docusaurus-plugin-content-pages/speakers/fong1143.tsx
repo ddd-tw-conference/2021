@@ -15,6 +15,9 @@ const i18n: SpeakerI18n = {
           "我是 Fong，正職是一名後端工程師，下班後是 DDDTW 社群志工。曾參加過鐵人賽兩次皆得過獎。"
         }
       </Typography>
+      <Typography variant="h5" component="h2">
+        {"Experiences"}
+      </Typography>
       <ol>
         <Typography component="li">{"2020 JSDC 線上演講"}</Typography>
         <Typography component="li">{"2020 DDDTW 八月 meetup 演講"}</Typography>

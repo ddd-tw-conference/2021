@@ -15,6 +15,9 @@ const i18n: SpeakerI18n = {
           "曾任國泰產險核心系統分析師、商業智慧工程師、B2C系統分析師、後端Team Lead，現職為架構師，負責前台與微服務中台的工作項目"
         }
       </Typography>
+      <Typography variant="h5" component="h2">
+        {"Experiences"}
+      </Typography>
       <ol>
         <Typography component="li">{"公司內部教育訓練"}</Typography>
         <Typography component="li">{"集團內部分享"}</Typography>

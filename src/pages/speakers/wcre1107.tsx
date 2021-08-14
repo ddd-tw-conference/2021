@@ -15,6 +15,9 @@ const i18n: SpeakerI18n = {
           "Served as a core system analyst, business intelligence engineer, B2C system analyst, and back-end Team Lead of Cathay Pacific Property & Casualty Insurance. Currently, he is an architect, responsible for the front-end and micro-service middle platform projects."
         }
       </Typography>
+      <Typography variant="h5" component="h2">
+        {"Experiences"}
+      </Typography>
       <ol>
         <Typography component="li">
           {"Cathay group internal education and training"}

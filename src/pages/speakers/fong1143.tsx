@@ -15,6 +15,9 @@ const i18n: SpeakerI18n = {
           "Hi, I’m Fong, currently a backend engineer at Carousell.  I love to share knowledge, and thus I become the volunteer and speaker of DDDTW community. Meanwhile, I attended the ITHELP 30-day Blog Contest and won the prizes twice, my blog titles are “Think in GraphQL” and “Think in Domain-Driven Design”."
         }
       </Typography>
+      <Typography variant="h5" component="h2">
+        {"Experiences"}
+      </Typography>
       <ol>
         <Typography component="li">
           {"2020 JSDC in Taiwan - speaker"}

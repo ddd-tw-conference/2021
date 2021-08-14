@@ -25,6 +25,9 @@ const i18n: SpeakerI18n = {
           "Hashtag #Engineer #entrepreneurship #SeniorManger #Volunteer #Visioner"
         }
       </Typography>
+      <Typography variant="h5" component="h2">
+        {"Experiences"}
+      </Typography>
       <ol>
         <Typography component="li">
           {"Agile Tour 2017/2018 Kaohsiung"}

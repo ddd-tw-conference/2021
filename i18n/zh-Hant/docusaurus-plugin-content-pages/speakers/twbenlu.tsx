@@ -9,14 +9,19 @@ const i18n: SpeakerI18n = {
   title: [],
   description: "N/A",
   detail: (
-    <ol>
-      <Typography component="li">
-        <A href="https://drive.google.com/drive/folders/1JS_qJcOBGbr35AF0qjuzhMCZJjiGXJXB?usp=sharing">
-          Net conf 2020
-        </A>
+    <>
+      <Typography variant="h5" component="h2">
+        {"Experiences"}
       </Typography>
-      <Typography component="li">MSDN 研討會</Typography>
-    </ol>
+      <ol>
+        <Typography component="li">
+          <A href="https://drive.google.com/drive/folders/1JS_qJcOBGbr35AF0qjuzhMCZJjiGXJXB?usp=sharing">
+            Net conf 2020
+          </A>
+        </Typography>
+        <Typography component="li">MSDN 研討會</Typography>
+      </ol>
+    </>
   ),
   sessions: [
     {

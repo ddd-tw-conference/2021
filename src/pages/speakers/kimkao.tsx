@@ -20,6 +20,9 @@ const i18n: SpeakerI18n = {
           "Currently working for AWS as a senior solution architect, co-founder of the DDD Taiwan Community (DDD Taiwan Community). Specializes in software system design, and is committed to the promotion of serverless services, help enterprises to create more appropriate solutions through DDD and convenient cloud services to solve real business problems."
         }
       </Typography>
+      <Typography variant="h5" component="h2">
+        {"Experiences"}
+      </Typography>
       <ol>
         <Typography component="li">
           {"2020 DDD Taiwan Conference - REFK EventStorming workshop"}

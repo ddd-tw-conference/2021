@@ -18,6 +18,9 @@ const i18n: SpeakerI18n = {
           "現任職於 AWS 擔任資深解決方案架構師，同時也是台灣領域驅動設計社群 (DDD Taiwan Community) 發起人之一。專長於軟體系統設計，並致力於投入無伺服器服務推廣，推動企業透過 DDD 與便捷的雲端服務，打造更適切的建構系統方案，解決真切的商務問題。"
         }
       </Typography>
+      <Typography variant="h5" component="h2">
+        {"Experiences"}
+      </Typography>
       <ol>
         <Typography component="li">
           {"2020 DDD Taiwan Conference - REFK 事件風暴工作坊"}
