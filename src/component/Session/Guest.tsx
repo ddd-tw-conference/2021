@@ -4,7 +4,7 @@ import { Typography } from "@material-ui/core";
 import Image from "@theme/IdealImage";
 import React, { memo } from "react";
 
-const imageSize = 32;
+const imageSize = 64;
 
 export type GuestProps = {
   name: string;

@@ -40,7 +40,7 @@ const i18n: SessionI18n = {
         }
       </Typography>
       <Typography variant="h5" component="h2">
-        {"Takeaways"}
+        {"Takeaway"}
       </Typography>
       <Typography>
         {"Get the basic understanding of TDD, BDD, and DDD."}

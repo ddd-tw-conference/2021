@@ -1,5 +1,5 @@
 import Link from "@docusaurus/Link";
-import { css } from "@emotion/css";
+import { css, keyframes } from "@emotion/css";
 import { Typography } from "@material-ui/core";
 import { ChatBubble } from "@material-ui/icons";
 import React, { memo } from "react";
@@ -16,15 +16,25 @@ const cssLink = css`
   align-items: baseline;
 `;
 
+const keyframesWobble = keyframes`
+  0% { transform: translate(-50%, 20%) scale(1.25, 0.75); }
+  50% { transform: translate(-50%, -20%) scale(1, 1); }
+  55% { transform: translate(-50%, -20%) rotate(15deg); }
+  60% { transform: translate(-50%, -20%) rotate(-15deg); }
+  65% { transform: translate(-50%, -20%) rotate(15deg); }
+  70% { transform: translate(-50%, -20%) rotate(-15deg); }
+  100% { transform: translate(-50%, 20%) scale(1.25, 0.75); }
+`;
+
+const cssChatBubble = css`
+  label: ChatBubble;
+  animation: ${keyframesWobble} 2s ease infinite; ;
+`;
+
 export default memo(function Session({ slug, name }: SessionProps) {
   return (
-    <Typography
-      component={Link}
-      className={cssLink}
-      variant="body2"
-      to={`/sessions/${slug}`}
-    >
-      <ChatBubble fontSize="inherit" />
+    <Typography component={Link} className={cssLink} to={`/sessions/${slug}`}>
+      <ChatBubble className={cssChatBubble} fontSize="inherit" />
       <div>{name}</div>
     </Typography>
   );

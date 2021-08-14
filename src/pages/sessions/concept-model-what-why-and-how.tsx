@@ -37,7 +37,7 @@ const i18n: SessionI18n = {
         <Typography component="li">{"Tips"}</Typography>
       </ol>
       <Typography variant="h5" component="h2">
-        {"Takeaways"}
+        {"Takeaway"}
       </Typography>
       <Typography>
         {

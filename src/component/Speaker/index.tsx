@@ -1,8 +1,10 @@
 import bg from "!file-loader!@site/asset/image/bg.svg";
 import { css } from "@emotion/css";
 import { Container, Typography } from "@material-ui/core";
+import useShowUp from "@site/src/hook/useShowUp";
 import Image from "@theme/IdealImage";
 import React, { memo, ReactNode, useEffect, useRef } from "react";
+import { animated, config, useSpring } from "react-spring";
 import Typed from "typed.js";
 import Layout from "../Layout";
 import MuiTheme from "../MuiTheme";
@@ -96,10 +98,17 @@ const cssImgPosition = css`
   }
 `;
 
-const cssImg = css`
-  label: Img;
+const cssImgAni = css`
+  label: ImgAni;
   height: var(--imageSize);
   width: var(--imageSize);
+  transform-origin: top;
+`;
+
+const cssImg = css`
+  label: Img;
+  height: 100%;
+  width: 100%;
   border-width: ${imageBorderWidth}px;
   border-color: var(--ifm-background-color);
   border-style: solid;
@@ -143,6 +152,15 @@ const cssDetail = css`
   gap: 16px;
 `;
 
+const useProfileImageStyles = () => {
+  const show = useShowUp();
+  const styles = useSpring({
+    transform: show ? "scale(1)" : "scale(0)",
+    config: config.slow,
+  });
+  return styles;
+};
+
 export default memo(function Speaker({
   name,
   realName,
@@ -170,6 +188,7 @@ export default memo(function Speaker({
       typed.destroy();
     };
   }, [title]);
+  const profileImageStyles = useProfileImageStyles();
   return (
     <Layout title={name} description={description} image={ogImage}>
       <div className={cssSpeaker}>
@@ -195,9 +214,11 @@ export default memo(function Speaker({
         </div>
         <Container maxWidth={containerSize} className={cssUnderBannerContainer}>
           <div className={cssImgPosition}>
-            <div className={cssImg}>
-              <Image img={profileImage} height={imageSize} size={imageSize} />
-            </div>
+            <animated.div className={cssImgAni} style={profileImageStyles}>
+              <div className={cssImg}>
+                <Image img={profileImage} height={imageSize} size={imageSize} />
+              </div>
+            </animated.div>
           </div>
           <div className={cssMainBlock}>
             <div className={cssInfo}>

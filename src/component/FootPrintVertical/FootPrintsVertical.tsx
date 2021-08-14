@@ -47,8 +47,10 @@ export default memo(function FootPrintsVertical({
   );
   const [springs, api] = useSprings(totalSize, springItems);
   useEffect(() => {
-    api.stop();
     api.start(springItems);
+    return () => {
+      api.stop();
+    };
   }, [api, inView.inView, springItems]);
   return (
     <div className={cls} ref={inView.ref}>

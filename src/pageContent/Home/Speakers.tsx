@@ -2,10 +2,11 @@ import Link from "@docusaurus/Link";
 import { css } from "@emotion/css";
 import useToggle from "@site/src/hook/useToggle";
 import Image from "@theme/IdealImage";
-import React, { memo } from "react";
-import { animated, config, useSpring } from "react-spring";
+import React, { memo, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { animated, config, useSpring, useSprings } from "react-spring";
 
-const imageSize = 64;
+const imageSize = 100;
 
 const speakers: SpeakerProps[] = [
   {
@@ -147,10 +148,22 @@ const cssSpeakers = css`
 `;
 
 export default memo(function Speakers() {
+  const [springs, api] = useSprings(speakers.length, () => ({
+    transform: "scale(0)",
+  }));
+  const { ref, inView } = useInView();
+  const [started, setStarted] = useState(false);
+  useEffect(() => {
+    if (started || inView) return;
+    api.start((i) => ({ transform: "scale(1)", delay: i * 80 }));
+    setStarted(true);
+  }, [api, inView, started]);
   return (
-    <div className={cssSpeakers}>
-      {speakers.map(({ slug, image }) => (
-        <Speaker key={slug} slug={slug} image={image} />
+    <div className={cssSpeakers} ref={ref}>
+      {speakers.map(({ slug, image }, i) => (
+        <animated.div key={slug} style={springs[i]}>
+          <Speaker slug={slug} image={image} />
+        </animated.div>
       ))}
     </div>
   );
