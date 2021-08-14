@@ -1,6 +1,7 @@
 import { css } from "@emotion/css";
 import { Box, Button, Paper, Typography } from "@material-ui/core";
 import { CalendarToday } from "@material-ui/icons";
+import A from "@site/src/component/A";
 import useShowInView from "@site/src/hook/useShowInView";
 import React, { memo } from "react";
 import { IntersectionOptions } from "react-intersection-observer";
@@ -49,18 +50,13 @@ export default memo(function BasicInfo() {
             <Typography component="div">{"10/16 Speeches, online"}</Typography>
           </Box>
         </Box>
-        <Button variant="contained" disabled>
+        <Button
+          variant="contained"
+          component={A}
+          href="https://dddtaiwan.kktix.cc/events/dddesigntwconference2021"
+        >
           <Box display="flex" flexDirection="column">
             <Typography variant="inherit">{i18n.joinNow}</Typography>
-            <Typography
-              className={css`
-                font-size: 0.875em;
-                text-transform: none;
-                color: #f00;
-              `}
-            >
-              {i18n.comingSoon}
-            </Typography>
           </Box>
         </Button>
       </div>

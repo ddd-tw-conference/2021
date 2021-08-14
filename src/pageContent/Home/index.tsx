@@ -6,7 +6,7 @@ import React, {
   memo,
   ReactNode,
   useContext,
-  useMemo,
+  useMemo
 } from "react";
 import Banner from "./Banner/Banner";
 import BasicInfo from "./BasicInfo";
@@ -21,7 +21,6 @@ export type I18n = {
   thisYear: ReactNode;
   thisYearArticle: ReactNode;
   joinNow: ReactNode;
-  comingSoon: ReactNode;
 };
 
 const I18nContext = createContext({} as I18n);

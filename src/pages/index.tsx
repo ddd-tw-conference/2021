@@ -43,7 +43,6 @@ const i18n: I18n = {
   thisYear: "This Year",
   thisYearArticle: <Typography>{description}</Typography>,
   joinNow: "Join Now",
-  comingSoon: "Coming Soon",
 };
 
 export default memo(function Page() {

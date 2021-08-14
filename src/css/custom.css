@@ -75,6 +75,25 @@ html[data-theme="light"] .navbar__logo {
   color: var(--ifm-navbar-link-color);
 }
 
+.navbar__inner .join-now {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: var(--ifm-color-primary);
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.navbar-sidebar .join-now {
+  color: var(--ifm-color-primary);
+}
+
+@media (max-width: 996px) {
+  .navbar__inner .join-now {
+    display: none;
+  }
+}
+
 a {
   transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) 300ms;
 }

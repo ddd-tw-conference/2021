@@ -36,7 +36,6 @@ const i18n: I18n = {
   thisYear: "今年年會",
   thisYearArticle: <Typography>{description}</Typography>,
   joinNow: "Join Now",
-  comingSoon: "敬請期待",
 };
 
 export default memo(function Page() {
