@@ -5,7 +5,7 @@ import Session from "@site/src/pageContent/sessions/evolutionary-aws-lambda-with
 import React, { memo } from "react";
 
 const i18n: SessionI18n = {
-  name: "領域故事匯 or DDD 如何影響建模實作",
+  name: "開發 Domain Storytelling: DDD 如何影響建模實作",
   description: "瞭解一種將領域知識轉化為有效商業軟體的協作建模技術。",
   detail: (
     <>
