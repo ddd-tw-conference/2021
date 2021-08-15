@@ -22,12 +22,12 @@ const cssList = css`
 export default memo(function Guests({ guests }: GuestsProps) {
   const [springs, api] = useSprings(guests.length, () => ({
     opacity: 0,
-    transform: "scale(0)",
+    transform: "translateX(30%)",
   }));
   useEffect(() => {
     api.start((i) => ({
       opacity: 1,
-      transform: "scale(1)",
+      transform: "translateX(0%)",
       delay: i * 300,
     }));
     // on mount
