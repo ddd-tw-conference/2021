@@ -7,9 +7,15 @@ import React, { memo } from "react";
 const i18n: SpeakerI18n = {
   name: "Ben Lu",
   title: [],
-  description: "N/A",
+  description:
+    "Ben Lu is working for a new startup company as Chief Technology Officer. Prior to join the startup , Ben has full experienced as  software engineer, MIS system engineer, Microsoft technical support consultant, Microsoft MVP (2014~2018), and chief information officer. In his more than 15 years of IT career, he has been facing the rapidly declining software industry with an attitude of [moving against the current, if not advancing, then retreating]. For now, he is currently building products based on Angular, .NET Core, Docker, Ceph, MongoDB, Redis, Machine learning... etc.",
   detail: (
     <>
+      <Typography>
+        {
+          "Ben Lu is working for a new startup company as Chief Technology Officer. Prior to join the startup , Ben has full experienced as  software engineer, MIS system engineer, Microsoft technical support consultant, Microsoft MVP (2014~2018), and chief information officer. In his more than 15 years of IT career, he has been facing the rapidly declining software industry with an attitude of [moving against the current, if not advancing, then retreating]. For now, he is currently building products based on Angular, .NET Core, Docker, Ceph, MongoDB, Redis, Machine learning... etc."
+        }
+      </Typography>
       <Typography variant="h5" component="h2">
         {"Experiences"}
       </Typography>
