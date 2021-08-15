@@ -38,6 +38,10 @@ const i18n: SpeakerI18n = {
       slug: "tdd-ddd-bdd-well-explained",
       name: "TDD, DDD, & BDD Well Explained",
     },
+    {
+      slug: "domain-storytelling-explore-system-design-at-the-crossroads-where-business-strategy-meet-technology",
+      name: "在業務與技術相遇的十字路口探索系統設計 - Domain Storytelling",
+    },
   ],
   ogImage: undefined,
 };
