@@ -177,7 +177,6 @@ export default memo(function Speaker({
   useEffect(() => {
     if (title.length === 0) return;
     if (!refTitle.current) return;
-    console.log("title", title);
     const typed = new Typed(refTitle.current, {
       strings: title,
       loop: title.length > 1,
