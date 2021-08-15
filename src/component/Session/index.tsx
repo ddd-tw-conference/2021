@@ -35,7 +35,7 @@ const cssContainer = css`
   label: Container;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 24px;
 `;
 
 const cssDetail = css`
@@ -43,7 +43,7 @@ const cssDetail = css`
   padding: 32px 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 `;
 
 export default memo(function ({
@@ -67,7 +67,9 @@ export default memo(function ({
       </div>
       <Container maxWidth="md">
         <div className={cssDetail}>{detail}</div>
-        <BeforeSessionArr links={beforeSession} />
+        {BeforeSessionArr && BeforeSessionArr.length > 0 ? (
+          <BeforeSessionArr links={beforeSession} />
+        ) : null}
       </Container>
     </Layout>
   );

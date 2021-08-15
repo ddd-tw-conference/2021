@@ -20,7 +20,7 @@ const cssGuest = css`
 const cssLink = css`
   label: Link;
   display: flex;
-  gap: 4px;
+  gap: 8px;
   align-items: center;
 `;
 

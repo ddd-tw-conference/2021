@@ -13,7 +13,7 @@ const cssList = css`
   label: List;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 24px;
   padding-left: 0;
   margin-bottom: 0;
 `;

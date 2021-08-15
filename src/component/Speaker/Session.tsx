@@ -17,13 +17,13 @@ const cssLink = css`
 `;
 
 const keyframesWobble = keyframes`
-  0% { transform: translate(-50%, 20%) scale(1.25, 0.75); }
-  50% { transform: translate(-50%, -20%) scale(1, 1); }
-  55% { transform: translate(-50%, -20%) rotate(15deg); }
-  60% { transform: translate(-50%, -20%) rotate(-15deg); }
-  65% { transform: translate(-50%, -20%) rotate(15deg); }
-  70% { transform: translate(-50%, -20%) rotate(-15deg); }
-  100% { transform: translate(-50%, 20%) scale(1.25, 0.75); }
+  0% { transform: translate(0, 20%) scale(1.25, 0.75); }
+  50% { transform: translate(0, -20%) scale(1, 1); }
+  55% { transform: translate(0, -20%) rotate(15deg); }
+  60% { transform: translate(0, -20%) rotate(-15deg); }
+  65% { transform: translate(0, -20%) rotate(15deg); }
+  70% { transform: translate(0, -20%) rotate(-15deg); }
+  100% { transform: translate(0, 20%) scale(1.25, 0.75); }
 `;
 
 const cssChatBubble = css`
