@@ -97,6 +97,22 @@ const speakers: SpeakerProps[] = [
     slug: "blues-ho",
     image: require("@site/src/speakers/blues-hoProfileImage.png"),
   },
+  {
+    slug: "morty",
+    image: require("@site/src/speakers/mortyProfileImage.png"),
+  },
+  {
+    slug: "eanlee",
+    image: require("@site/src/speakers/eanleeProfileImage.png"),
+  },
+  {
+    slug: "chiwencheng",
+    image: require("@site/src/speakers/chiwenchengProfileImage.png"),
+  },
+  {
+    slug: "max",
+    image: require("@site/src/speakers/maxProfileImage.png"),
+  },
 ];
 
 type SpeakerProps = {
