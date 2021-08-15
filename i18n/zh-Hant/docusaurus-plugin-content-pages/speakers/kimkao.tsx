@@ -52,7 +52,7 @@ const i18n: SpeakerI18n = {
   sessions: [
     {
       slug: "continuous-architecture-embracing-multiple-viewpoints-for-sustainable-solutions",
-      name: "Continuous Architecture : Embracing Multiple Viewpoints for Sustainable Solutions",
+      name: "持續演進的架構 - 擁抱多元利害關係人視角",
     },
   ],
   ogImage: undefined,

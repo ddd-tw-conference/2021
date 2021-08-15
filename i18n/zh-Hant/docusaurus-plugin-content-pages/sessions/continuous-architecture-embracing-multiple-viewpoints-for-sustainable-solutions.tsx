@@ -4,7 +4,7 @@ import Session from "@site/src/pageContent/sessions/continuous-architecture-embr
 import React, { memo } from "react";
 
 const i18n: SessionI18n = {
-  name: "持續演進的架構  - 擁抱多元視角",
+  name: "持續演進的架構 - 擁抱多元利害關係人視角",
   description:
     "在建構系統架構時，經常期望可以建構可長遠維運的良好架構，但是往往囿於一時的熱門技術導入，缺乏了對整體發展的關注。持續良好架構主要築基於對於多重視角的綜合整理，並且依循領域驅動設計的業務發展變遷推進，若能兼顧著從安全、時間、與應對業務變動的轉折上，找到一個指引設計的方式，那麼建構出來的解決方案方可持續運行。",
   detail: (
