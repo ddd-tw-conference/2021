@@ -6,7 +6,7 @@ import React, { memo } from "react";
 const i18n: SpeakerI18n = {
   name: "Kim Kao",
   title: [
-    "Sr. Solutions Architect @AWS",
+    "Senior Solutions Architect at Amazon Web Services",
     "Problem Solver",
     "Well Architected Life explorer",
   ],
