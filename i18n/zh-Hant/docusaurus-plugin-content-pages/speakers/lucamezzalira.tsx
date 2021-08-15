@@ -32,7 +32,7 @@ const i18n: SpeakerI18n = {
   sessions: [
     {
       slug: "evolutionary-aws-lambda-with-hexagonal-architecture",
-      name: "Evolutionary AWS Lambda with hexagonal architecture",
+      name: "通過六邊形架構進化的 AWS Lambda",
     },
   ],
   ogImage: undefined,

@@ -4,7 +4,7 @@ import Session from "@site/src/pageContent/sessions/evolutionary-aws-lambda-with
 import React, { memo } from "react";
 
 const i18n: SessionI18n = {
-  name: "Evolutionary AWS Lambda with hexagonal architecture",
+  name: "通過六邊形架構進化的 AWS Lambda",
   description:
     "在現在，架構的發展是一種強制性的特徵，而使用六邊形架構結合 AWS Lambda，可以提供你正在尋找的敏捷性。",
   detail: (
