@@ -42,7 +42,7 @@ const i18n: SpeakerI18n = {
           }
         </Typography>
         <Typography component="li">
-          {"2020/2019/2018 AWS Taipei Summit (細部略)"}
+          {"2020/2019/2018 AWS Taipei Summit"}
         </Typography>
         <Typography component="li">
           {

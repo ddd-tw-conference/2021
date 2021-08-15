@@ -34,7 +34,7 @@ const i18n: SpeakerI18n = {
           {"2020 AWS CTO night - Host, Opening and 現代化管理技術對談"}
         </Typography>
         <Typography component="li">
-          {"2020/2019/2018 AWS Taipei Summit (細部略)"}
+          {"2020/2019/2018 AWS Taipei Summit"}
         </Typography>
         <Typography component="li">
           {
