@@ -11,6 +11,7 @@ const cssSessions = css`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  overflow: hidden;
 `;
 
 export default memo(function Sessions({ sessions }: SessionsProps) {
