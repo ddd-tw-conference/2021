@@ -19,14 +19,10 @@ const i18n: SessionI18n = {
       </Typography>
       <ul>
         <Typography component="li">
-          {
-            "您可以從 DDD 的個人想法中受益，而無需成為端到端專家。您將學習更有效的方法來幫助您的團隊理解、好奇並希望接受 DDD。"
-          }
+          {"您可以從 DDD 的個人想法中受益，而無需成為端到端專家。"}
         </Typography>
         <Typography component="li">
-          {
-            "You will learn more effective ways to help you team understand, be curious about and hopefully embrace DDD."
-          }
+          {"您將學習更有效的方法來幫助您的團隊理解、好奇並希望接受 DDD。"}
         </Typography>
       </ul>
     </>
