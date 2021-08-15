@@ -9,6 +9,7 @@ const cssSessions = css`
   label: Sessions;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 `;
 
 export default memo(function Sessions({ sessions }: SessionsProps) {
