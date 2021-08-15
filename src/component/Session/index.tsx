@@ -1,10 +1,11 @@
 import bg from "!file-loader!@site/asset/image/bg.svg";
 import { css } from "@emotion/css";
-import { Container, Slide, Typography } from "@material-ui/core";
+import { Collapse, Container, Slide, Typography } from "@material-ui/core";
 import Layout from "@site/src/component/Layout";
 import useShowUp from "@site/src/hook/useShowUp";
 import type { ReactNode } from "react";
 import React, { memo } from "react";
+import { animated, config, useSpring } from "react-spring";
 import MuiTheme from "../MuiTheme";
 import type { BeforeSessionArrProps } from "./BeforeSessionArr";
 import BeforeSessionArr from "./BeforeSessionArr";
@@ -55,6 +56,11 @@ export default memo(function ({
   guests,
 }: SessionProps) {
   const showUp = useShowUp();
+  const slideUpStyles = useSpring({
+    opacity: showUp ? 1 : 0,
+    transform: showUp ? "translateY(0px)" : "translateY(64px)",
+    config: config.slow,
+  });
   return (
     <Layout title={name} description={description}>
       <div className={cssTitle}>
@@ -69,14 +75,16 @@ export default memo(function ({
           </Container>
         </MuiTheme>
       </div>
-      <Slide in={showUp} direction="up">
-        <Container maxWidth="md">
-          <div className={cssDetail}>{detail}</div>
-          {BeforeSessionArr && BeforeSessionArr.length > 0 ? (
-            <BeforeSessionArr links={beforeSession} />
-          ) : null}
-        </Container>
-      </Slide>
+      <animated.div style={slideUpStyles}>
+        <Collapse in={showUp}>
+          <Container maxWidth="md">
+            <div className={cssDetail}>{detail}</div>
+            {BeforeSessionArr && BeforeSessionArr.length > 0 ? (
+              <BeforeSessionArr links={beforeSession} />
+            ) : null}
+          </Container>
+        </Collapse>
+      </animated.div>
     </Layout>
   );
 });

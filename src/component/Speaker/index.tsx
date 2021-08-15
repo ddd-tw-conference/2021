@@ -1,6 +1,6 @@
 import bg from "!file-loader!@site/asset/image/bg.svg";
 import { css } from "@emotion/css";
-import { Container, Slide, Typography } from "@material-ui/core";
+import { Collapse, Container, Slide, Typography } from "@material-ui/core";
 import useShowUp from "@site/src/hook/useShowUp";
 import Image from "@theme/IdealImage";
 import React, { memo, ReactNode, useEffect, useRef } from "react";
@@ -190,6 +190,11 @@ export default memo(function Speaker({
   }, [title]);
   const profileImageStyles = useProfileImageStyles();
   const showUp = useShowUp();
+  const slideUpStyles = useSpring({
+    opacity: showUp ? 1 : 0,
+    transform: showUp ? "translateY(0px)" : "translateY(20px)",
+    config: config.slow,
+  });
   return (
     <Layout title={name} description={description} image={ogImage}>
       <div className={cssSpeaker}>
@@ -228,9 +233,9 @@ export default memo(function Speaker({
               <Links links={links} />
               <Sessions sessions={sessions} />
             </div>
-            <Slide in={showUp} direction="up">
-              <div className={cssDetail}>{detail}</div>
-            </Slide>
+            <animated.div className={cssDetail} style={slideUpStyles}>
+              <Collapse in={showUp}>{detail}</Collapse>
+            </animated.div>
           </div>
         </Container>
       </div>
