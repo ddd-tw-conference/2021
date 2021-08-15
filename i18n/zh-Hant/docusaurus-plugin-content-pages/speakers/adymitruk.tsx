@@ -22,7 +22,7 @@ const i18n: SpeakerI18n = {
   sessions: [
     {
       slug: "event-modeling-as-a-way-to-entirely-manage-the-software-development-life-cycle",
-      name: "Event Modeling as a Way to Entirely Manage the Software Development Life-Cycle.",
+      name: "通過事件建模作為管理軟件開發生命週期的方式",
     },
   ],
   ogImage: undefined,

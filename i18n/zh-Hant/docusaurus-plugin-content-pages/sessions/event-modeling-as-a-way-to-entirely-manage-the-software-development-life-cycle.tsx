@@ -4,7 +4,7 @@ import Session from "@site/src/pageContent/sessions/event-modeling-as-a-way-to-e
 import React, { memo } from "react";
 
 const i18n: SessionI18n = {
-  name: "Event Modeling as a Way to Entirely Manage the Software Development Life-Cycle.",
+  name: "通過事件建模作為管理軟件開發生命週期的方式",
   description:
     "事件建模在事件溯源中有著深厚的淵源。 正是通過這個鏡頭捕捉，信息系統及其自動化開始變得可分解為狀態更改類型和工作流的示例呈現。 這將能讓團隊更為準確的估計和提供適當的激勵與抑制機制，以確保質量，同時消除嘗試和實現這些目標的主觀方法。 如果您的團隊準備好進入負責任的軟體開發的下一個級別，則需要考慮許多重要的變化。",
   detail: (
