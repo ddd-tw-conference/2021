@@ -4,7 +4,7 @@ import Session from "@site/src/pageContent/sessions/getting-to-ddd-pragmatic-or-
 import React, { memo } from "react";
 
 const i18n: SessionI18n = {
-  name: "Getting to DDD: Pragmatic or Principled?",
+  name: "一窺堂奧 - 領域驅動設計：是基於臨場務實還是有原則可參考?",
   description:
     "DDD 是一個很大的議題。 但是，您不必成為端到端專家即可受益。 我們將研究學習 DDD 的方法，以便您在不斷學習的同時隨時可以開始。",
   detail: (

@@ -23,7 +23,7 @@ const i18n: SpeakerI18n = {
   sessions: [
     {
       slug: "getting-to-ddd-pragmatic-or-principled",
-      name: "Getting to DDD: Pragmatic or Principled?",
+      name: "一窺堂奧 - 領域驅動設計：是基於臨場務實還是有原則可參考?",
     },
   ],
   ogImage: undefined,
