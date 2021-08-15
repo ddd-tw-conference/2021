@@ -92,6 +92,7 @@ const cssImgPosition = css`
   height: 0;
   width: 0;
   transform: translateX(16px);
+  pointer-events: none;
   ${narrowBreakPoint} {
     left: 50%;
     transform: translateX(calc(0px - var(--imageSize) / 2));
