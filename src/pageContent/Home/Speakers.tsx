@@ -183,7 +183,7 @@ export default memo(function Speakers() {
   const [started, setStarted] = useState(false);
   useEffect(() => {
     if (started || inView) return;
-    api.start((i) => ({ transform: "scale(1)", delay: i * 80 }));
+    api.start((i) => ({ transform: "scale(1)", delay: i * 60 }));
     setStarted(true);
   }, [api, inView, started]);
   return (

@@ -1,7 +1,8 @@
 import bg from "!file-loader!@site/asset/image/bg.svg";
 import { css } from "@emotion/css";
-import { Container, Typography } from "@material-ui/core";
+import { Container, Slide, Typography } from "@material-ui/core";
 import Layout from "@site/src/component/Layout";
+import useShowUp from "@site/src/hook/useShowUp";
 import type { ReactNode } from "react";
 import React, { memo } from "react";
 import MuiTheme from "../MuiTheme";
@@ -53,24 +54,29 @@ export default memo(function ({
   beforeSession,
   guests,
 }: SessionProps) {
+  const showUp = useShowUp();
   return (
     <Layout title={name} description={description}>
       <div className={cssTitle}>
         <MuiTheme dark>
           <Container maxWidth="md" className={cssContainer}>
-            <Typography variant="h4" component="h1" color="inherit">
-              {name}
-            </Typography>
+            <Slide in={showUp}>
+              <Typography variant="h4" component="h1" color="inherit">
+                {name}
+              </Typography>
+            </Slide>
             {<Guests guests={guests} />}
           </Container>
         </MuiTheme>
       </div>
-      <Container maxWidth="md">
-        <div className={cssDetail}>{detail}</div>
-        {BeforeSessionArr && BeforeSessionArr.length > 0 ? (
-          <BeforeSessionArr links={beforeSession} />
-        ) : null}
-      </Container>
+      <Slide in={showUp} direction="up">
+        <Container maxWidth="md">
+          <div className={cssDetail}>{detail}</div>
+          {BeforeSessionArr && BeforeSessionArr.length > 0 ? (
+            <BeforeSessionArr links={beforeSession} />
+          ) : null}
+        </Container>
+      </Slide>
     </Layout>
   );
 });

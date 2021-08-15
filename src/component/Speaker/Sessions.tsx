@@ -1,5 +1,6 @@
 import { css } from "@emotion/css";
-import React, { memo } from "react";
+import React, { memo, useEffect } from "react";
+import { animated, useSprings } from "react-spring";
 import type { SessionProps } from "./Session";
 import Session from "./Session";
 
@@ -13,10 +14,25 @@ const cssSessions = css`
 `;
 
 export default memo(function Sessions({ sessions }: SessionsProps) {
+  const [springs, api] = useSprings(sessions.length, () => ({
+    opacity: 0,
+    transform: "translateX(50%)",
+  }));
+  useEffect(() => {
+    api.start((i) => ({
+      opacity: 1,
+      transform: "translateX(0%)",
+      delay: i * 500,
+    }));
+    // on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div className={cssSessions}>
-      {sessions.map(({ slug, name }) => (
-        <Session key={slug} slug={slug} name={name} />
+      {sessions.map(({ slug, name }, i) => (
+        <animated.div key={slug} style={springs[i]}>
+          <Session slug={slug} name={name} />
+        </animated.div>
       ))}
     </div>
   );
