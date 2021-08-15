@@ -1,5 +1,4 @@
 import { Typography } from "@material-ui/core";
-import A from "@site/src/component/A";
 import type { SessionI18n } from "@site/src/component/Session";
 import Session from "@site/src/pageContent/sessions/evolutionary-aws-lambda-with-hexagonal-architecture";
 import React, { memo } from "react";
@@ -52,20 +51,14 @@ const i18n: SessionI18n = {
           {"全局觀：看看其他 DDD 建模方法以及它們彼此的關係"}
         </Typography>
       </ul>
-      <Typography variant="h5" component="h2">
-        {"Recommended readings before session"}
-      </Typography>
-      <Typography>
-        {
-          "Not necessary, but if you are curious, you can find a collection of videos, blogs, podcasts, etc. at "
-        }
-        <A href="https://github.com/hofstef/awesome-domain-storytelling">
-          <code>awesome-domain-storytelling</code>
-        </A>
-      </Typography>
     </>
   ),
-  beforeSession: [],
+  beforeSession: [
+    {
+      name: "hofstef/awesome-domain-storytelling",
+      link: "https://github.com/hofstef/awesome-domain-storytelling",
+    },
+  ],
   guests: [
     {
       name: "Dr. Stefan Hofer",

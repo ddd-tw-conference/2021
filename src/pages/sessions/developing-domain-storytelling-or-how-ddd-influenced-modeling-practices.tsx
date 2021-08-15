@@ -1,5 +1,4 @@
 import { Typography } from "@material-ui/core";
-import A from "@site/src/component/A";
 import type { SessionI18n } from "@site/src/component/Session";
 import Session from "@site/src/pageContent/sessions/developing-domain-storytelling-or-how-ddd-influenced-modeling-practices";
 import React, { memo } from "react";
@@ -63,20 +62,14 @@ const i18n: SessionI18n = {
           }
         </Typography>
       </ul>
-      <Typography variant="h5" component="h2">
-        {"Recommended readings before session"}
-      </Typography>
-      <Typography>
-        {
-          "Not necessary, but if you are curious, you can find a collection of videos, blogs, podcasts, etc. at "
-        }
-        <A href="https://github.com/hofstef/awesome-domain-storytelling">
-          <code>awesome-domain-storytelling</code>
-        </A>
-      </Typography>
     </>
   ),
-  beforeSession: [],
+  beforeSession: [
+    {
+      name: "hofstef/awesome-domain-storytelling",
+      link: "https://github.com/hofstef/awesome-domain-storytelling",
+    },
+  ],
   guests: [
     {
       name: "Dr. Stefan Hofer",
