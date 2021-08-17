@@ -233,8 +233,10 @@ export default memo(function Speaker({
               <Links links={links} />
               <Sessions sessions={sessions} />
             </div>
-            <animated.div className={cssDetail} style={slideUpStyles}>
-              <Collapse in={showUp}>{detail}</Collapse>
+            <animated.div style={slideUpStyles}>
+              <Collapse in={showUp}>
+                <div className={cssDetail}>{detail}</div>
+              </Collapse>
             </animated.div>
           </div>
         </Container>
