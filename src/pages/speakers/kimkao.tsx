@@ -11,17 +11,12 @@ const i18n: SpeakerI18n = {
     "Well Architected Life explorer",
   ],
   description:
-    "A father of 3, whose life has been well architected, Kim is currently working as a senior solution architect with AWS.",
+    "A father of 3, whose life has been well architected, Kim is currently working as a senior solution architect with AWS, Co-founder of the DDD Taiwan Community (DDD Taiwan Community). Specializes in software system design, and is committed to the promotion of serverless services, help enterprises to create more appropriate solutions through DDD and convenient cloud services to solve real business problems.",
   detail: (
     <>
       <Typography>
         {
-          "A father of 3, whose life has been well architected, Kim is currently working as a senior solution architect with AWS."
-        }
-      </Typography>
-      <Typography>
-        {
-          "Currently working for AWS as a senior solution architect, co-founder of the DDD Taiwan Community (DDD Taiwan Community). Specializes in software system design, and is committed to the promotion of serverless services, help enterprises to create more appropriate solutions through DDD and convenient cloud services to solve real business problems."
+          "A father of 3, whose life has been well architected, Kim is currently working as a senior solution architect with AWS, Co-founder of the DDD Taiwan Community (DDD Taiwan Community). Specializes in software system design, and is committed to the promotion of serverless services, help enterprises to create more appropriate solutions through DDD and convenient cloud services to solve real business problems."
         }
       </Typography>
       <Typography variant="h5" component="h2">
