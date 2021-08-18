@@ -113,6 +113,10 @@ const speakers: SpeakerProps[] = [
     slug: "max",
     image: require("@site/src/speakers/maxProfileImage.png"),
   },
+  {
+    slug: "msli",
+    image: require("@site/src/speakers/msliProfileImage.png"),
+  },
 ];
 
 type SpeakerProps = {
