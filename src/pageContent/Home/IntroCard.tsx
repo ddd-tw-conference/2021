@@ -2,6 +2,7 @@ import { css, cx } from "@emotion/css";
 import { Container, Paper, Typography } from "@material-ui/core";
 import useWindowScroll from "@react-hook/window-scroll";
 import { useWindowHeight } from "@react-hook/window-size";
+import useThemeContext from "@theme/hooks/useThemeContext";
 import React, { ReactNode, useMemo, useRef } from "react";
 import { animated, config, useSpring } from "react-spring";
 
@@ -78,6 +79,7 @@ export default function IntroCard({
   title?: ReactNode;
   content?: ReactNode;
 }) {
+  const { isDarkTheme } = useThemeContext();
   const ref = useRef<HTMLDivElement | null>(null);
   const windowHeight = useWindowHeight();
   const windowScroll = useWindowScroll(30);
@@ -102,9 +104,11 @@ export default function IntroCard({
     config: config.wobbly,
   });
   const imgStyles = useSpring({
-    filter: `grayscale(${20 + 20 * transitionPosition}%) blur(${
-      0.5 + transitionPosition * 0.3
-    }vw) brightness(${1.1 - transitionPosition * 0.5})`,
+    filter: `sepia(${0.1 + 0.3 * transitionPosition}) blur(${
+      0.5 + transitionPosition * 0.5
+    }vw) brightness(${
+      1.1 - transitionPosition * (isDarkTheme ? 0.5 : 0.1)
+    }) grayscale(${isDarkTheme ? 0 : transitionPosition * 30}%)`,
     config: config.gentle,
   });
   const titleStyles = useSpring({
