@@ -67,7 +67,7 @@ const cssArticleContent = css`
 `;
 
 const start = -0.2;
-const finish = 0.2;
+const finish = 0;
 
 export default function IntroCard({
   img,
@@ -99,7 +99,7 @@ export default function IntroCard({
   const articleStyles = useSpring({
     opacity: transitionPosition,
     transform: `translateY(${(1 - transitionPosition) * -30}px)`,
-    config: config.gentle,
+    config: config.wobbly,
   });
   const imgStyles = useSpring({
     filter: `grayscale(${20 + 20 * transitionPosition}%) blur(${
@@ -109,11 +109,11 @@ export default function IntroCard({
   });
   const titleStyles = useSpring({
     transform: `translateY(${(1 - transitionPosition) * -30}px)`,
-    config: config.gentle,
+    config: config.wobbly,
   });
   const contentStyles = useSpring({
     transform: `translateY(${(1 - transitionPosition) * 60}px)`,
-    config: config.gentle,
+    config: config.wobbly,
   });
   return (
     <div className={cssIntroCard} ref={ref}>
