@@ -6,7 +6,7 @@ import React, {
   memo,
   ReactNode,
   useContext,
-  useMemo
+  useMemo,
 } from "react";
 import Banner from "./Banner/Banner";
 import BasicInfo from "./BasicInfo";
@@ -54,9 +54,9 @@ export default memo(function Home({ i18n }: { i18n: I18n }) {
           <Banner />
           <div className={cssBody}>
             <BasicInfo />
-            <IntroBlock />
           </div>
         </div>
+        <IntroBlock />
       </Layout>
     </I18nContext.Provider>
   );

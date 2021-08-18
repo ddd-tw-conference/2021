@@ -14,5 +14,5 @@
       }
     ]
   },
-  "include": ["docusaurus.config.js", ".", "@docusaurus/module-type-aliases"]
+  "include": ["src/"]
 }
