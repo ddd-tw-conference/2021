@@ -52,7 +52,7 @@ const cssArticlePaper = css`
   gap: 16px;
   padding: 36px 18px;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.72);
 
   html[data-theme="dark"] & {
     background-color: rgba(0, 0, 0, 0.5);
