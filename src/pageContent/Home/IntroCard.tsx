@@ -1,5 +1,6 @@
-import { css, cx } from "@emotion/css";
+import { css, cx, keyframes } from "@emotion/css";
 import { Container, Paper, Typography } from "@material-ui/core";
+import { KeyboardArrowUp } from "@material-ui/icons";
 import useWindowScroll from "@react-hook/window-scroll";
 import { useWindowHeight } from "@react-hook/window-size";
 import useThemeContext from "@theme/hooks/useThemeContext";
@@ -73,6 +74,30 @@ const cssBottomViewAnchor = css`
   position: absolute;
   bottom: 0;
   height: 100vh;
+`;
+
+const keyframesUpIcon = keyframes`
+  label: UpIcon;
+  0%, 100% {
+    transform: scaleX(1.8) scaleY(1) translateY(0px);
+  }
+  35% {
+    transform: scaleX(1.6) scaleY(1.1) translateY(-10px);
+  }
+`;
+
+const cssUpIconBlock = css`
+  label: UpIconBlock;
+  position: absolute;
+  top: 8px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  opacity: 0.7;
+  & svg {
+    font-size: 48px;
+    animation: ${keyframesUpIcon} 1.2s ease-in-out infinite;
+  }
 `;
 
 const startingPosition = -0.66;
@@ -171,6 +196,9 @@ export default function IntroCard({
             </Paper>
           </Container>
         </animated.div>
+      </div>
+      <div className={cssUpIconBlock}>
+        <KeyboardArrowUp />
       </div>
     </div>
   );
