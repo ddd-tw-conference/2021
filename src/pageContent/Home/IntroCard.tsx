@@ -5,10 +5,11 @@ import { useWindowHeight } from "@react-hook/window-size";
 import useThemeContext from "@theme/hooks/useThemeContext";
 import React, { ReactNode, useMemo, useRef } from "react";
 import { animated, config, useSpring } from "react-spring";
+import scrollIntoView from "scroll-into-view-if-needed";
 
 const cssIntroCard = css`
   label: IntroCard;
-  height: 200vh;
+  min-height: 150vh;
   position: relative;
 `;
 
@@ -67,8 +68,16 @@ const cssArticleContent = css`
   gap: 16px;
 `;
 
-const start = -0.2;
-const finish = 0;
+const cssBottomViewAnchor = css`
+  label: cssBottomViewAnchor;
+  position: absolute;
+  bottom: 0;
+  height: 100vh;
+`;
+
+const startingPosition = -0.66;
+const startedPosition = 0;
+const finishingPosition = 0.33;
 
 export default function IntroCard({
   img,
@@ -88,39 +97,52 @@ export default function IntroCard({
     if (!windowHeight) return 0;
     // useEffect deps
     if (windowScroll) (() => {})();
-    const y = ref.current.getBoundingClientRect().top;
-    const position = -y / (windowHeight * 1.5);
+    const rect = ref.current.getBoundingClientRect();
+    const y = rect.top;
+    const position = -y / rect.height;
     return position;
   }, [windowHeight, windowScroll]);
+  const started = useMemo(() => position > startedPosition, [position]);
   const transitionPosition = useMemo(() => {
-    const pos = (position - start) / (finish - start);
+    const pos =
+      (position - startingPosition) / (finishingPosition - startingPosition);
     if (pos < 0) return 0;
     if (pos > 1) return 1;
     return pos;
   }, [position]);
   const articleStyles = useSpring({
     opacity: transitionPosition,
-    transform: `translateY(${(1 - transitionPosition) * -30}px)`,
-    config: config.wobbly,
-  });
-  const imgStyles = useSpring({
-    filter: `sepia(${0.1 + 0.3 * transitionPosition}) blur(${
-      0.5 + transitionPosition * 0.5
-    }vw) brightness(${
-      1.1 - transitionPosition * (isDarkTheme ? 0.5 : 0.1)
-    }) grayscale(${isDarkTheme ? 0 : transitionPosition * 30}%)`,
+    transform: `translateY(${(1 - transitionPosition) * -50}vh)`,
     config: config.gentle,
   });
+  const imgStyles = useSpring({
+    filter: [
+      `sepia(${started ? 0.4 : 0.1})`,
+      `blur(${started ? 2 : 0.5}vw)`,
+      `brightness(${!started ? 1.1 : isDarkTheme ? 0.6 : 1})`,
+      `grayscale(${!started ? 0 : isDarkTheme ? 0 : 30}%)`,
+    ].join(" "),
+    config: config.slow,
+  });
   const titleStyles = useSpring({
-    transform: `translateY(${(1 - transitionPosition) * -30}px)`,
-    config: config.wobbly,
+    transform: `translateY(${(1 - transitionPosition) * -25}vh)`,
+    config: config.gentle,
   });
   const contentStyles = useSpring({
-    transform: `translateY(${(1 - transitionPosition) * 60}px)`,
-    config: config.wobbly,
+    transform: `translateY(${(1 - transitionPosition) * 75}vh)`,
+    config: config.gentle,
   });
+  const bottomViewAnchorRef = useRef<HTMLDivElement | null>(null);
   return (
-    <div className={cssIntroCard} ref={ref}>
+    <div
+      className={cssIntroCard}
+      ref={ref}
+      onClick={() => {
+        if (!bottomViewAnchorRef.current) return;
+        scrollIntoView(bottomViewAnchorRef.current, { behavior: "smooth" });
+      }}
+    >
+      <div className={cssBottomViewAnchor} ref={bottomViewAnchorRef} />
       <div className={cssImgBlock}>
         <animated.div
           className={cx(

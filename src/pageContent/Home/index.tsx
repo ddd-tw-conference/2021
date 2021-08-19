@@ -55,8 +55,8 @@ export default memo(function Home({ i18n }: { i18n: I18n }) {
           <div className={cssBody}>
             <BasicInfo />
           </div>
+          <IntroBlock />
         </div>
-        <IntroBlock />
       </Layout>
     </I18nContext.Provider>
   );
