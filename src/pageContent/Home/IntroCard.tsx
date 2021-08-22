@@ -1,10 +1,10 @@
 import { css, cx, keyframes } from "@emotion/css";
-import { Container, Paper, Typography } from "@material-ui/core";
+import { Container, Paper, Typography, useTheme } from "@material-ui/core";
 import { KeyboardArrowUp } from "@material-ui/icons";
 import useWindowScroll from "@react-hook/window-scroll";
-import { useWindowHeight } from "@react-hook/window-size";
-import useThemeContext from "@theme/hooks/useThemeContext";
-import React, { ReactNode, useMemo, useRef } from "react";
+import { useWindowSize } from "@react-hook/window-size";
+import Image from "@theme/IdealImage";
+import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { animated, config, useSpring } from "react-spring";
 import scrollIntoView from "scroll-into-view-if-needed";
 
@@ -14,8 +14,8 @@ const cssIntroCard = css`
   position: relative;
 `;
 
-const cssImgBlock = css`
-  label: ImgBlock;
+const cssSticky = css`
+  label: Sticky;
   overflow: hidden;
   position: sticky;
   top: 0;
@@ -24,15 +24,6 @@ const cssImgBlock = css`
   justify-content: stretch;
   align-items: stretch;
   overflow: hidden;
-`;
-
-const cssImgBlockInner = css`
-  label: ImgBlockInner;
-  margin: -0.8vw;
-  flex: 1;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 `;
 
 const cssArticle = css`
@@ -55,10 +46,10 @@ const cssArticlePaper = css`
   gap: 16px;
   padding: 36px 18px;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.72);
+  background-color: rgba(255, 255, 255, 0.8);
 
   html[data-theme="dark"] & {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 `;
 
@@ -104,6 +95,15 @@ const startingPosition = -0.66;
 const startedPosition = 0;
 const finishingPosition = 0.33;
 
+const useWindowSizeCSR = () => {
+  const [windowWidth, windowHeight] = useWindowSize();
+  const [size, setSize] = useState(() => [0, 0] as [number, number]);
+  useEffect(() => {
+    setSize([windowWidth, windowHeight]);
+  }, [windowHeight, windowWidth]);
+  return size;
+};
+
 export default function IntroCard({
   img,
   title,
@@ -113,9 +113,9 @@ export default function IntroCard({
   title?: ReactNode;
   content?: ReactNode;
 }) {
-  const { isDarkTheme } = useThemeContext();
+  const theme = useTheme();
   const ref = useRef<HTMLDivElement | null>(null);
-  const windowHeight = useWindowHeight();
+  const [windowWidth, windowHeight] = useWindowSizeCSR();
   const windowScroll = useWindowScroll(30);
   const position = useMemo(() => {
     if (!ref.current) return 0;
@@ -140,14 +140,48 @@ export default function IntroCard({
     transform: `translateY(${(1 - transitionPosition) * -50}vh)`,
     config: config.gentle,
   });
-  const imgStyles = useSpring({
-    filter: [
-      `sepia(${started ? 0.4 : 0.1})`,
-      `blur(${started ? 2 : 0.5}vw)`,
-      `brightness(${!started ? 1.1 : isDarkTheme ? 0.6 : 1})`,
-      `grayscale(${!started ? 0 : isDarkTheme ? 0 : 30}%)`,
-    ].join(" "),
-    config: config.slow,
+  const imgWidth = useMemo(() => {
+    if (!windowHeight || !windowWidth) return 0;
+    const width = Math.ceil((windowHeight * 1920) / 1280);
+    const minWidth = Math.min(windowWidth, theme.breakpoints.values.lg);
+    return Math.max(width, minWidth);
+  }, [theme.breakpoints.values.lg, windowHeight, windowWidth]);
+  const imgHeight = useMemo(
+    () => Math.floor((imgWidth / 1920) * 1280),
+    [imgWidth]
+  );
+  const cssImg = useMemo(() => {
+    if (!windowHeight || !imgWidth) return "";
+    return css`
+      label: Img;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: ${imgHeight}px;
+      width: ${imgWidth}px;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      & > * {
+        width: 100%;
+        height: 100%;
+      }
+    `;
+  }, [imgHeight, imgWidth, windowHeight]);
+  const cssImgBlur = useMemo(() => {
+    if (!imgWidth) return "";
+    return css`
+      label: ImgBlur;
+      height: ${imgHeight * 1.05}px;
+      width: ${imgWidth * 1.05}px;
+      filter: blur(5px);
+    `;
+  }, [imgHeight, imgWidth]);
+  const imgBlurStyles = useSpring({
+    opacity: started ? 1 : 0,
+    config: config.gentle,
   });
   const titleStyles = useSpring({
     transform: `translateY(${(1 - transitionPosition) * -25}vh)`,
@@ -168,16 +202,13 @@ export default function IntroCard({
       }}
     >
       <div className={cssBottomViewAnchor} ref={bottomViewAnchorRef} />
-      <div className={cssImgBlock}>
-        <animated.div
-          className={cx(
-            cssImgBlockInner,
-            css`
-              background-image: url(${img});
-            `
-          )}
-          style={imgStyles}
-        />
+      <div className={cssSticky}>
+        <div className={cssImg}>
+          <Image img={img} />
+        </div>
+        <animated.div className={cx(cssImg, cssImgBlur)} style={imgBlurStyles}>
+          <Image img={img} />
+        </animated.div>
         <animated.div className={cssArticle} style={articleStyles}>
           <Container maxWidth="sm">
             <Paper className={cssArticlePaper}>

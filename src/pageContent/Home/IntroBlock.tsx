@@ -12,17 +12,17 @@ export default memo(function () {
   return (
     <div className={cssContainer}>
       <IntroCard
-        img={require("!file-loader!./aboutUs.png").default}
+        img={require("./aboutUs.jpg")}
         title={i18n.aboutUs}
         content={i18n.aboutUsArticle}
       />
       <IntroCard
-        img={require("!file-loader!./pastYear.png").default}
+        img={require("./pastYear.jpg")}
         title={i18n.pastYear}
         content={i18n.pastYearArticle}
       />
       <IntroCard
-        img={require("!file-loader!./thisYear.png").default}
+        img={require("./thisYear.jpg")}
         title={i18n.thisYear}
         content={i18n.thisYearArticle}
       />
