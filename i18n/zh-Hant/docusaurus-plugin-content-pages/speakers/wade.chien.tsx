@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import type { SpeakerI18n } from "@site/src/component/Speaker";
-import Speaker from "@site/src/pageContent/speakers/2954201";
+import Speaker from "@site/src/pageContent/speakers/wade.chien";
 import React, { memo } from "react";
 
 const i18n: SpeakerI18n = {

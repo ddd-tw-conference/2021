@@ -8,10 +8,14 @@ const speakerCommonInfo: SpeakerCommonInfo = {
   links: [
     {
       type: "email",
-      link: "2954201@gmail.com",
+      link: "wade.chien@gmail.com",
+    },
+    {
+      type: "linkedin",
+      link: "wade-chien",
     },
   ],
-  profileImage: require("@site/src/speakers/2954201ProfileImage.png"),
+  profileImage: require("@site/src/speakers/wade.chienProfileImage.png"),
 };
 
 export default memo(function Page(i18n: SpeakerI18n) {
