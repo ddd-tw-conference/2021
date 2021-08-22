@@ -26,8 +26,8 @@ const i18n: SessionI18n = {
   guests: [
     {
       name: "簡維德",
-      slug: "2954201",
-      image: require("@site/src/speakers/2954201ProfileImage.png"),
+      slug: "wade.chien",
+      image: require("@site/src/speakers/wade.chienProfileImage.png"),
     },
   ],
 };
