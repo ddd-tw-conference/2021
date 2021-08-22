@@ -164,6 +164,7 @@ export default function IntroCard({
       flex: 1;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
       & > * {
         width: 100%;
         height: 100%;
@@ -205,10 +206,13 @@ export default function IntroCard({
       <div className={cssSticky}>
         <div className={cssImg}>
           <Image img={img} />
+          <animated.div
+            className={cx(cssImg, cssImgBlur)}
+            style={imgBlurStyles}
+          >
+            <Image img={img} />
+          </animated.div>
         </div>
-        <animated.div className={cx(cssImg, cssImgBlur)} style={imgBlurStyles}>
-          <Image img={img} />
-        </animated.div>
         <animated.div className={cssArticle} style={articleStyles}>
           <Container maxWidth="sm">
             <Paper className={cssArticlePaper}>
