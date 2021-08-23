@@ -1,6 +1,6 @@
 import { createTheme, ThemeProvider } from "@material-ui/core";
 import useThemeContext from "@theme/hooks/useThemeContext";
-import React, { memo, ReactNode, useEffect, useMemo, useState } from "react";
+import { memo, ReactNode, useEffect, useMemo, useState } from "react";
 
 export type MuiThemeProps = {
   children?: ReactNode;

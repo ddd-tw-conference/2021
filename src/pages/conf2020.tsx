@@ -1,5 +1,5 @@
 import Conf2020, { I18n } from "@site/src/pageContent/conf2020";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const i18n: I18n = {
   title: "Review 2020",

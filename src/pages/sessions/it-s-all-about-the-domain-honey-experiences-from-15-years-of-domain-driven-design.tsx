@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import type { SessionI18n } from "@site/src/component/Session";
 import Session from "@site/src/pageContent/sessions/it-s-all-about-the-domain-honey-experiences-from-15-years-of-domain-driven-design";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const i18n: SessionI18n = {
   name: "It’s all about the domain, honey ! Experiences from 15 years of Domain-Driven Design",

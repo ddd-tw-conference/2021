@@ -2,7 +2,7 @@ import Link from "@docusaurus/Link";
 import { css } from "@emotion/css";
 import { Typography } from "@material-ui/core";
 import Image from "@theme/IdealImage";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const imageSize = 64;
 

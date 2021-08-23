@@ -2,7 +2,7 @@ import { Typography } from "@material-ui/core";
 import type { SpeakerI18n } from "@site/src/component/Speaker";
 import Speaker from "@site/src/pageContent/speakers/brucezhang";
 import escape from "lodash/escape";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const i18n: SpeakerI18n = {
   name: "張逸",

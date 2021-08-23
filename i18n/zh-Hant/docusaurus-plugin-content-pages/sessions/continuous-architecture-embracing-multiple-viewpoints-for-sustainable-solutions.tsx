@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import type { SessionI18n } from "@site/src/component/Session";
 import Session from "@site/src/pageContent/sessions/continuous-architecture-embracing-multiple-viewpoints-for-sustainable-solutions";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const i18n: SessionI18n = {
   name: "持續演進的架構 - 擁抱多元利害關係人視角",

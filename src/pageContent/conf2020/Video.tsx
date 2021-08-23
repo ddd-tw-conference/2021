@@ -3,13 +3,13 @@ import { css } from "@emotion/css";
 import { Box, Container, Tab, Tabs, TabsProps } from "@material-ui/core";
 import MuiTheme from "@site/src/component/MuiTheme";
 import throttle from "lodash/throttle";
-import React, {
+import {
   memo,
   ReactNode,
   useCallback,
   useEffect,
   useRef,
-  useState
+  useState,
 } from "react";
 import { useI18n } from ".";
 

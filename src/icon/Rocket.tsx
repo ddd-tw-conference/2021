@@ -1,5 +1,5 @@
 import { SvgIcon, SvgIconProps } from "@material-ui/core";
-import React, { memo } from "react";
+import { memo } from "react";
 
 export type RocketProps = Omit<SvgIconProps, "viewBox" | "children">;
 

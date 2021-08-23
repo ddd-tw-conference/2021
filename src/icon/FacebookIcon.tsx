@@ -1,5 +1,5 @@
 import { SvgIcon } from "@material-ui/core";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const FacebookIcon = () => (
   <SvgIcon viewBox="0 0 24 24">

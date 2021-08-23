@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import A from "@site/src/component/A";
-import React, { memo } from "react";
+import { memo } from "react";
 
 export type BeforeSessionProps = {
   name: string;

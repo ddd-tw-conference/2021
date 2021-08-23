@@ -1,7 +1,6 @@
 import { css } from "@emotion/css";
 import { Container, Paper } from "@material-ui/core";
 import MuiTheme from "@site/src/component/MuiTheme";
-import React from "react";
 import Contact from "./Contact";
 import CopyRight from "./CopyRight";
 

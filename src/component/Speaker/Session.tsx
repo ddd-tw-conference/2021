@@ -1,8 +1,8 @@
 import Link from "@docusaurus/Link";
 import { css, keyframes } from "@emotion/css";
 import { Typography } from "@material-ui/core";
-import { ChatBubble } from "@material-ui/icons";
-import React, { memo } from "react";
+import ChatBubble from "@material-ui/icons/ChatBubble";
+import { memo } from "react";
 
 export type SessionProps = {
   slug: string;

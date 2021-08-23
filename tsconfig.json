@@ -5,6 +5,7 @@
     "paths": {
       "@site/*": ["./*"]
     },
+    "jsx": "react-jsx",
     "plugins": [
       {
         "name": "typescript-styled-plugin",

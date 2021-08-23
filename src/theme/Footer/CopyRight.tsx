@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 import { Typography } from "@material-ui/core";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const cls = css`
   text-align: center;

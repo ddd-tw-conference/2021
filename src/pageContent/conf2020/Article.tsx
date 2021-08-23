@@ -1,11 +1,11 @@
-import { OpenInNew } from ".pnpm/@material-ui+icons@5.0.0-alpha.37_2dfd7b75e581d7ae5b28282a038747f7/node_modules/@material-ui/icons";
 import Link from "@docusaurus/Link";
 import { css, cx, keyframes } from "@emotion/css";
 import { Box, Button, Container, Typography } from "@material-ui/core";
+import OpenInNew from "@material-ui/icons/OpenInNew";
 import A from "@site/src/component/A";
 import FootPrintsVertical from "@site/src/component/FootPrintVertical/FootPrintsVertical";
 import Rocket from "@site/src/icon/Rocket";
-import React, { memo } from "react";
+import { memo } from "react";
 import { useI18n } from ".";
 
 const cssArticle = css`

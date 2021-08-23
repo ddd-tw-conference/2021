@@ -1,10 +1,10 @@
 import { css, cx, keyframes } from "@emotion/css";
 import { Container, Paper, Typography, useTheme } from "@material-ui/core";
-import { KeyboardArrowUp } from "@material-ui/icons";
+import KeyboardArrowUp from "@material-ui/icons/KeyboardArrowUp";
 import useWindowScroll from "@react-hook/window-scroll";
 import { useWindowSize } from "@react-hook/window-size";
 import Image from "@theme/IdealImage";
-import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { animated, config, useSpring } from "react-spring";
 import scrollIntoView from "scroll-into-view-if-needed";
 

@@ -1,13 +1,7 @@
 import { css } from "@emotion/css";
 import { useTheme } from "@material-ui/core";
 import Layout from "@site/src/component/Layout";
-import React, {
-  createContext,
-  memo,
-  ReactNode,
-  useContext,
-  useMemo,
-} from "react";
+import { createContext, memo, ReactNode, useContext, useMemo } from "react";
 import Banner from "./Banner/Banner";
 import BasicInfo from "./BasicInfo";
 import IntroBlock from "./IntroBlock";

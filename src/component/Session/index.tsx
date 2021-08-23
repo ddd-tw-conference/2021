@@ -4,7 +4,7 @@ import { Collapse, Container, Slide, Typography } from "@material-ui/core";
 import Layout from "@site/src/component/Layout";
 import useShowUp from "@site/src/hook/useShowUp";
 import type { ReactNode } from "react";
-import React, { memo } from "react";
+import { memo } from "react";
 import { animated, config, useSpring } from "react-spring";
 import MuiTheme from "../MuiTheme";
 import type { BeforeSessionArrProps } from "./BeforeSessionArr";

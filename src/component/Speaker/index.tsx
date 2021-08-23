@@ -3,7 +3,7 @@ import { css } from "@emotion/css";
 import { Collapse, Container, Slide, Typography } from "@material-ui/core";
 import useShowUp from "@site/src/hook/useShowUp";
 import Image from "@theme/IdealImage";
-import React, { memo, ReactNode, useEffect, useRef } from "react";
+import { memo, ReactNode, useEffect, useRef } from "react";
 import { animated, config, useSpring } from "react-spring";
 import Typed from "typed.js";
 import Layout from "../Layout";

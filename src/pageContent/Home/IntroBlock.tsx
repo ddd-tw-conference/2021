@@ -1,5 +1,5 @@
 import { css } from "@emotion/css";
-import React, { memo } from "react";
+import { memo } from "react";
 import { useI18n } from ".";
 import IntroCard from "./IntroCard";
 

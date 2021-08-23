@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import type { SessionI18n } from "@site/src/component/Session";
 import Session from "@site/src/pageContent/sessions/getting-to-ddd-pragmatic-or-principled";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const i18n: SessionI18n = {
   name: "一窺堂奧 - 領域驅動設計：是基於臨場務實還是有原則可參考?",

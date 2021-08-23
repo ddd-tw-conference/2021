@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 import { IconButton } from "@material-ui/core";
-import { Email } from "@material-ui/icons";
+import Email from "@material-ui/icons/Email";
 import A from "@site/src/component/A";
 import FacebookIcon from "@site/src/icon/FacebookIcon";
 import FacebookSocialIcon from "@site/src/icon/FacebookSocialIcon";
@@ -8,7 +8,7 @@ import InstagramIcon from "@site/src/icon/InstagramIcon";
 import MessengerIcon from "@site/src/icon/MessengerIcon";
 import TwitterIcon from "@site/src/icon/TwitterIcon";
 import YouTubeIcon from "@site/src/icon/YouTubeIcon";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const cls = css`
   display: flex;

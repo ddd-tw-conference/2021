@@ -1,5 +1,6 @@
 import { IconButton } from "@material-ui/core";
-import { Language, Mail } from "@material-ui/icons";
+import Language from "@material-ui/icons/Language";
+import Mail from "@material-ui/icons/Mail";
 import A from "@site/src/component/A";
 import AboutMeIcon from "@site/src/icon/AboutMeIcon";
 import BloggerIcon from "@site/src/icon/BloggerIcon";
@@ -12,7 +13,7 @@ import MediumIcon from "@site/src/icon/MediumIcon";
 import PluralsightIcon from "@site/src/icon/PluralsightIcon";
 import TwitterIcon from "@site/src/icon/TwitterIcon";
 import YouTubeIcon from "@site/src/icon/YouTubeIcon";
-import React, { memo, useMemo } from "react";
+import { memo, useMemo } from "react";
 
 export type LinkProps = {
   type:
