@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import type { SessionI18n } from "@site/src/component/Session";
 import Session from "@site/src/pageContent/sessions/rising-from-the-ashes-agile-team-rising-model-helps-you-from-defeat-to-victory";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const i18n: SessionI18n = {
   name: "浴火重生！敏捷團隊重生模型 (Agile Team Rising Model)，從絕敗走向卓越",

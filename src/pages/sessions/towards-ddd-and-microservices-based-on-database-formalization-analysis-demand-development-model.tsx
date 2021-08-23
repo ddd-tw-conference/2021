@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import type { SessionI18n } from "@site/src/component/Session";
 import Session from "@site/src/pageContent/sessions/towards-ddd-and-microservices-based-on-database-formalization-analysis-demand-development-model";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const i18n: SessionI18n = {
   name: "Towards DDD and microservices based on database formalization analysis demand development model",

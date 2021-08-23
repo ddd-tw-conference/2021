@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 import FootPrint, { FootPrintProps } from "@site/src/icon/FootPrint";
-import React, { memo, useMemo } from "react";
+import { memo, useMemo } from "react";
 
 export type FootProps = FootPrintProps & {
   foot: "right" | "left";

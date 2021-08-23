@@ -2,7 +2,7 @@ import Link from "@docusaurus/Link";
 import { css } from "@emotion/css";
 import useToggle from "@site/src/hook/useToggle";
 import Image from "@theme/IdealImage";
-import React, { memo, useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { animated, config, useSpring, useSprings } from "react-spring";
 

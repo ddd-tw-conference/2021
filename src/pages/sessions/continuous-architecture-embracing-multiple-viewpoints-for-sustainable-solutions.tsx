@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import type { SessionI18n } from "@site/src/component/Session";
 import Session from "@site/src/pageContent/sessions/continuous-architecture-embracing-multiple-viewpoints-for-sustainable-solutions";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const i18n: SessionI18n = {
   name: "Continuous Architecture : Embracing Multiple Viewpoints for Sustainable Solutions",

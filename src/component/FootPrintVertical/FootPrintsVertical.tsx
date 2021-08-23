@@ -1,5 +1,5 @@
 import { css } from "@emotion/css";
-import React, { memo, ReactNode, useCallback, useEffect, useMemo } from "react";
+import { memo, ReactNode, useCallback, useEffect, useMemo } from "react";
 import { IntersectionOptions, useInView } from "react-intersection-observer";
 import { animated, useSprings } from "react-spring";
 import Foot from "./Foot";

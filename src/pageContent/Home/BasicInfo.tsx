@@ -1,9 +1,9 @@
 import { css } from "@emotion/css";
 import { Box, Button, Paper, Typography } from "@material-ui/core";
-import { CalendarToday } from "@material-ui/icons";
+import CalendarToday from "@material-ui/icons/CalendarToday";
 import A from "@site/src/component/A";
 import useShowInView from "@site/src/hook/useShowInView";
-import React, { memo } from "react";
+import { memo } from "react";
 import { IntersectionOptions } from "react-intersection-observer";
 import { animated } from "react-spring";
 import { useI18n } from ".";

@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import type { SessionI18n } from "@site/src/component/Session";
 import Session from "@site/src/pageContent/sessions/start-from-scratch-essentials-of-game-development-agile-ddd";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const i18n: SessionI18n = {
   name: "從0開始,遊戲開發奧義: Agile x DDD",

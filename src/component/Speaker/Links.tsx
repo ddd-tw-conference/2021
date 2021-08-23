@@ -1,5 +1,5 @@
 import { css } from "@emotion/css";
-import React, { memo, useEffect } from "react";
+import { memo, useEffect } from "react";
 import { animated, useSprings } from "react-spring";
 import { narrowBreakPoint } from "./css";
 import type { LinkProps } from "./Link";

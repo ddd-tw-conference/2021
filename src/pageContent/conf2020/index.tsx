@@ -1,5 +1,5 @@
 import Layout from "@site/src/component/Layout";
-import React, { createContext, memo, ReactNode, useContext } from "react";
+import { createContext, memo, ReactNode, useContext } from "react";
 import Article from "./Article";
 import Video from "./Video";
 

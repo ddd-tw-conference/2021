@@ -2,7 +2,7 @@ import Session, {
   SessionCommonInfo,
   SessionI18n,
 } from "@site/src/component/Session";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const sessionCommonInfo: SessionCommonInfo = {};
 

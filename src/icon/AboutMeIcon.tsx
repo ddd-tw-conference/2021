@@ -1,6 +1,6 @@
 import type { SvgIconProps } from "@material-ui/core";
 import { SvgIcon } from "@material-ui/core";
-import React, { forwardRef, memo } from "react";
+import { forwardRef, memo } from "react";
 
 export type AboutMeIconProps = Omit<SvgIconProps, "viewBox">;
 

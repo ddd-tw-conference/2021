@@ -2,7 +2,7 @@ import Speaker, {
   SpeakerCommonInfo,
   SpeakerI18n,
 } from "@site/src/component/Speaker";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const speakerCommonInfo: SpeakerCommonInfo = {
   links: [],

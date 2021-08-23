@@ -27,6 +27,7 @@ module.exports = {
       respectPrefersColorScheme: true,
     },
     navbar: {
+      hideOnScroll: true,
       title: "DDD TW Conference 2021",
       logo: {
         alt: "DDD TW Conference 2021",

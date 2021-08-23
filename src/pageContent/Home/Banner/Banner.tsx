@@ -2,7 +2,7 @@ import upper from "!file-loader!./upper.svg";
 import { css } from "@emotion/css";
 import useThemeContext from "@theme/hooks/useThemeContext";
 import Granim from "granim";
-import React, { memo, useEffect, useMemo, useRef, useState } from "react";
+import { memo, useEffect, useMemo, useRef, useState } from "react";
 
 const bannerHeight = "calc(100vh - var(--ifm-navbar-height) - 126px)";
 

@@ -1,13 +1,7 @@
 import { css } from "@emotion/css";
 import { useTheme } from "@material-ui/core";
 import Layout from "@site/src/component/Layout";
-import React, {
-  createContext,
-  memo,
-  ReactNode,
-  useContext,
-  useMemo
-} from "react";
+import { createContext, memo, ReactNode, useContext, useMemo } from "react";
 import Banner from "./Banner/Banner";
 import BasicInfo from "./BasicInfo";
 import IntroBlock from "./IntroBlock";
@@ -54,8 +48,8 @@ export default memo(function Home({ i18n }: { i18n: I18n }) {
           <Banner />
           <div className={cssBody}>
             <BasicInfo />
-            <IntroBlock />
           </div>
+          <IntroBlock />
         </div>
       </Layout>
     </I18nContext.Provider>

@@ -1,5 +1,5 @@
 import DefaultLayout from "@theme/Layout";
-import React, { memo, ReactNode } from "react";
+import { memo, ReactNode } from "react";
 import MuiTheme from "../MuiTheme";
 
 /**

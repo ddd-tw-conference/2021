@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import type { SessionI18n } from "@site/src/component/Session";
 import Session from "@site/src/pageContent/sessions/evolutionary-aws-lambda-with-hexagonal-architecture";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const i18n: SessionI18n = {
   name: "開發 Domain Storytelling: DDD 如何影響建模實作",

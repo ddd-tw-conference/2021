@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import type { SessionI18n } from "@site/src/component/Session";
 import Session from "@site/src/pageContent/sessions/developing-domain-storytelling-or-how-ddd-influenced-modeling-practices";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const i18n: SessionI18n = {
   name: "Developing Domain Storytelling, or: How DDD influenced modeling practices",
