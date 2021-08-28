@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import type { SessionI18n } from "@site/src/component/Session";
-import Session from "@site/src/pageContent/sessions/a-practical-guide-for-domain-driven-design-teams";
+import Session from "@site/src/pageContent/sessions/complexity-thinking-in-domain-driven-design";
 import { memo } from "react";
 
 const i18n: SessionI18n = {

@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import type { SessionI18n } from "@site/src/component/Session";
-import Session from "@site/src/pageContent/sessions/a-practical-guide-for-domain-driven-design-teams";
+import Session from "@site/src/pageContent/sessions/insurance-ddd-middle-platform-microservices-cathay-pacific-property-insurance-besafe-platform-experience-sharing";
 import { memo } from "react";
 
 const i18n: SessionI18n = {

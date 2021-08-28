@@ -1,6 +1,6 @@
+import Link from "@docusaurus/Link";
 import { css } from "@emotion/css";
 import { Box, Button, Paper, Typography } from "@material-ui/core";
-import CalendarToday from "@material-ui/icons/CalendarToday";
 import A from "@site/src/component/A";
 import useShowInView from "@site/src/hook/useShowInView";
 import { memo } from "react";
@@ -44,10 +44,13 @@ export default memo(function BasicInfo() {
     >
       <div className={cssTop}>
         <Box display="flex" gap={1} alignItems="center">
-          <CalendarToday />
           <Box display="flex" flexDirection="column" gap={1}>
-            <Typography component="div">{"10/15 Workshops"}</Typography>
-            <Typography component="div">{"10/16 Speeches, online"}</Typography>
+            <Typography component={Link} to="/schedule/workshops">
+              {"10/15 Workshops"}
+            </Typography>
+            <Typography component={Link} to="/schedule/speeches">
+              {"10/16 Speeches, online"}
+            </Typography>
           </Box>
         </Box>
         <Button

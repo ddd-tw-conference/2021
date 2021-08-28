@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import type { SessionI18n } from "@site/src/component/Session";
-import Session from "@site/src/pageContent/sessions/evolutionary-aws-lambda-with-hexagonal-architecture";
+import Session from "@site/src/pageContent/sessions/developing-domain-storytelling-or-how-ddd-influenced-modeling-practices";
 import { memo } from "react";
 
 const i18n: SessionI18n = {

@@ -35,8 +35,13 @@ module.exports = {
       },
       items: [
         {
-          to: "/conf2020",
-          label: "Review 2020",
+          to: "/schedule/workshops",
+          label: "Workshops",
+          position: "right",
+        },
+        {
+          to: "/schedule/speeches",
+          label: "Speeches",
           position: "right",
         },
         {
@@ -68,7 +73,7 @@ module.exports = {
     ],
   ],
   stylesheets: [
-    "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap",
+    "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&family=Wire+One&display=swap",
   ],
   scripts: ["https://www.youtube.com/iframe_api"],
   plugins: ["@docusaurus/plugin-ideal-image"],
