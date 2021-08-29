@@ -1,4 +1,3 @@
-import Link from "@docusaurus/Link";
 import { css } from "@emotion/css";
 import { Box, Button, Paper, Typography } from "@material-ui/core";
 import A from "@site/src/component/A";
@@ -8,6 +7,7 @@ import { IntersectionOptions } from "react-intersection-observer";
 import { animated } from "react-spring";
 import { useI18n } from ".";
 import Speakers from "./Speakers";
+import ToSchedule from "./ToSchedule";
 
 const cssBasicInfo = css`
   width: fit-content;
@@ -45,12 +45,12 @@ export default memo(function BasicInfo() {
       <div className={cssTop}>
         <Box display="flex" gap={1} alignItems="center">
           <Box display="flex" flexDirection="column" gap={1}>
-            <Typography component={Link} to="/schedule/workshops">
+            <ToSchedule to="/schedule/workshops">
               {"10/15 Workshops"}
-            </Typography>
-            <Typography component={Link} to="/schedule/speeches">
+            </ToSchedule>
+            <ToSchedule to="/schedule/speeches">
               {"10/16 Speeches, online"}
-            </Typography>
+            </ToSchedule>
           </Box>
         </Box>
         <Button
