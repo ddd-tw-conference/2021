@@ -201,9 +201,11 @@ export default memo(function Speeches({
             </td>
             <td>
               <Item
-                {...session["autonomy-is-that-what-we-really-want"]}
+                {...session[
+                  "towards-ddd-and-microservices-based-on-database-formalization-analysis-demand-development-model"
+                ]}
                 time="14:10 ~ 15:00"
-                difficulty={difficultyAdvanced}
+                difficulty={difficultyMedium}
               />
             </td>
             <td>
@@ -267,11 +269,9 @@ export default memo(function Speeches({
             </td>
             <td>
               <Item
-                {...session[
-                  "towards-ddd-and-microservices-based-on-database-formalization-analysis-demand-development-model"
-                ]}
+                {...session["autonomy-is-that-what-we-really-want"]}
                 time="16:30 ~ 17:20"
-                difficulty={difficultyMedium}
+                difficulty={difficultyAdvanced}
               />
             </td>
             <td>
