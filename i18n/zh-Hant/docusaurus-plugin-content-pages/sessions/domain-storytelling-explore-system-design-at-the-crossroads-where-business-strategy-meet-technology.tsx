@@ -20,6 +20,26 @@ const i18n: SessionI18n = {
         }
       </Typography>
       <Typography>{"比想像中還簡單的系統設計：從說故事開始！"}</Typography>
+      <Typography>
+        {
+          "本次的工作坊中，首先將透過「同理心地圖」，站在顧客的角度進行業務的價值釐清與認定，接著學習本次主題「Domain Storytelling」來瞭解業務的全貌，再進一步做出價值選擇，找到值得解決的問題，最後深入核心領域，搭配「使用者故事地圖」並再次進行DST建模，設計出合適的解決方案。"
+        }
+      </Typography>
+      <Typography variant="h5" component="h2">
+        {"預期聽眾學習成果"}
+      </Typography>
+      <Typography>{"隨著業務的歷程探索，你將會體驗到"}</Typography>
+      <ol>
+        <Typography component="li">
+          {"深度瞭解顧客，挖掘顧客的真實需求"}
+        </Typography>
+        <Typography component="li">
+          {"瞭解業務全貌並做出價值選擇，為產品開發提供方向"}
+        </Typography>
+        <Typography component="li">
+          {"深入核心領域，發想合適的解決方案"}
+        </Typography>
+      </ol>
     </>
   ),
   beforeSession: [],

@@ -22,6 +22,30 @@ const i18n: SessionI18n = {
       <Typography>
         {"System design is simpler than imagined: start with storytelling!"}
       </Typography>
+      <Typography>
+        {`In this workshop, we will first use the "empathy map" to clarify and identify the value of the business from the perspective of the customer, and then learn how to use "Domain Storytelling" to understand the big picture of the business. After that, we can thus make further value selection, finding a problem worth solving, and finally dive deep into the core domain and design your domain model according with "user story map" and  DST to design a suitable solution.`}
+      </Typography>
+      <Typography variant="h5" component="h2">
+        {"Takeaway"}
+      </Typography>
+      <Typography>
+        {"As the exploration of your business, your will experience:"}
+      </Typography>
+      <ol>
+        <Typography component="li">
+          {
+            "In-depth understanding of customers, digging out the real needs of customers"
+          }
+        </Typography>
+        <Typography component="li">
+          {
+            "Understand the overall picture of the business and make value selection to provide direction for product development"
+          }
+        </Typography>
+        <Typography component="li">
+          {"Dive deep into core domains and come up with suitable solutions"}
+        </Typography>
+      </ol>
     </>
   ),
   beforeSession: [],
