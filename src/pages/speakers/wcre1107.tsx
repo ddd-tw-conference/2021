@@ -28,7 +28,7 @@ const i18n: SpeakerI18n = {
   ),
   sessions: [
     {
-      slug: "insurance-ddd-middle-platform-microservices-cathay-pPacific-property-insurance-besafe-platform-experience-sharing",
+      slug: "insurance-ddd-middle-platform-microservices-cathay-pacific-property-insurance-besafe-platform-experience-sharing",
       name: "Insurance × DDD × Middle Platform × Microservices-Cathay Pacific Property Insurance BeSafe Platform Experience Sharing",
     },
   ],

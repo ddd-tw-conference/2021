@@ -30,7 +30,7 @@ const i18n: SessionI18n = {
   beforeSession: [],
   guests: [
     {
-      name: "Mia",
+      name: "李孟萱",
       slug: "msli",
       image: require("@site/src/speakers/msliProfileImage.png"),
     },

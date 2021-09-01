@@ -2,9 +2,9 @@ import { css, cx, keyframes } from "@emotion/css";
 import { Container, Paper, Typography, useTheme } from "@material-ui/core";
 import KeyboardArrowUp from "@material-ui/icons/KeyboardArrowUp";
 import useWindowScroll from "@react-hook/window-scroll";
-import { useWindowSize } from "@react-hook/window-size";
+import useWindowSizeCsr from "@site/src/hook/useWindowSizeCsr";
 import Image from "@theme/IdealImage";
-import { ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import { ReactNode, useMemo, useRef } from "react";
 import { animated, config, useSpring } from "react-spring";
 import scrollIntoView from "scroll-into-view-if-needed";
 
@@ -95,15 +95,6 @@ const startingPosition = -0.66;
 const startedPosition = 0;
 const finishingPosition = 0.33;
 
-const useWindowSizeCSR = () => {
-  const [windowWidth, windowHeight] = useWindowSize();
-  const [size, setSize] = useState(() => [0, 0] as [number, number]);
-  useEffect(() => {
-    setSize([windowWidth, windowHeight]);
-  }, [windowHeight, windowWidth]);
-  return size;
-};
-
 export default function IntroCard({
   img,
   title,
@@ -115,7 +106,7 @@ export default function IntroCard({
 }) {
   const theme = useTheme();
   const ref = useRef<HTMLDivElement | null>(null);
-  const [windowWidth, windowHeight] = useWindowSizeCSR();
+  const [windowWidth, windowHeight] = useWindowSizeCsr();
   const windowScroll = useWindowScroll(30);
   const position = useMemo(() => {
     if (!ref.current) return 0;

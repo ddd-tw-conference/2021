@@ -1,7 +1,9 @@
 import bg from "!file-loader!@site/asset/image/bg.svg";
 import { css } from "@emotion/css";
 import { Collapse, Container, Slide, Typography } from "@material-ui/core";
+import DifficultyDisplay from "@site/src/component/Difficulty";
 import Layout from "@site/src/component/Layout";
+import type { Difficulty } from "@site/src/constants";
 import useShowUp from "@site/src/hook/useShowUp";
 import type { ReactNode } from "react";
 import { memo } from "react";
@@ -18,6 +20,7 @@ export type SessionI18n = {
   detail: ReactNode;
   beforeSession: BeforeSessionArrProps["links"];
   guests: GuestsProps["guests"];
+  difficulty?: Difficulty;
 };
 
 export type SessionCommonInfo = {};
@@ -48,12 +51,19 @@ const cssDetail = css`
   gap: 24px;
 `;
 
+const cssDifficulty = css`
+  label: Difficulty;
+  font-size: 0.85em;
+  justify-content: flex-end;
+`;
+
 export default memo(function ({
   name,
   description,
   detail,
   beforeSession,
   guests,
+  difficulty,
 }: SessionProps) {
   const showUp = useShowUp();
   const slideUpStyles = useSpring({
@@ -78,7 +88,15 @@ export default memo(function ({
       <animated.div style={slideUpStyles}>
         <Collapse in={showUp}>
           <Container maxWidth="md">
-            <div className={cssDetail}>{detail}</div>
+            <div className={cssDetail}>
+              {difficulty && (
+                <DifficultyDisplay
+                  className={cssDifficulty}
+                  difficulty={difficulty}
+                />
+              )}
+              {detail}
+            </div>
             {BeforeSessionArr && BeforeSessionArr.length > 0 ? (
               <BeforeSessionArr links={beforeSession} />
             ) : null}

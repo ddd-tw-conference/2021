@@ -48,7 +48,7 @@ const i18n: SessionI18n = {
   ],
   guests: [
     {
-      name: "Teddy Chen",
+      name: "陳建村",
       slug: "teddy.chen.tw",
       image: require("@site/src/speakers/teddy.chen.twProfileImage.png"),
     },
