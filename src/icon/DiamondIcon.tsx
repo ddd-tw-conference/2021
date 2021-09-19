@@ -1,6 +1,6 @@
 import type { SvgIconProps } from "@material-ui/core";
 import { SvgIcon } from "@material-ui/core";
-import React, { memo } from "react";
+import { memo } from "react";
 
 export default memo(function DiamondIcon(props: SvgIconProps) {
   return (

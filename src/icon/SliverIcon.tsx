@@ -1,7 +1,7 @@
 import { css } from "@emotion/css";
 import type { SvgIconProps } from "@material-ui/core";
 import { SvgIcon } from "@material-ui/core";
-import React, { memo } from "react";
+import { memo } from "react";
 
 const cls = css`
   label: SliverIcon;
