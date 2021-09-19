@@ -3,6 +3,7 @@ import { Container, Paper } from "@material-ui/core";
 import MuiTheme from "@site/src/component/MuiTheme";
 import Contact from "./Contact";
 import CopyRight from "./CopyRight";
+import Sponsors from "./Sponsors";
 
 const cssContainer = css`
   label: Footer;
@@ -19,6 +20,7 @@ function Footer() {
     <MuiTheme>
       <Paper component="footer">
         <Container className={cssContainer}>
+          <Sponsors />
           <Contact />
           <CopyRight />
         </Container>
