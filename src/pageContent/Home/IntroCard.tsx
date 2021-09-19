@@ -87,6 +87,7 @@ const cssUpIconBlock = css`
   opacity: 0.7;
   & svg {
     font-size: 48px;
+    cursor: pointer;
     animation: ${keyframesUpIcon} 1.2s ease-in-out infinite;
   }
 `;
@@ -185,14 +186,7 @@ export default function IntroCard({
   });
   const bottomViewAnchorRef = useRef<HTMLDivElement | null>(null);
   return (
-    <div
-      className={cssIntroCard}
-      ref={ref}
-      onClick={() => {
-        if (!bottomViewAnchorRef.current) return;
-        scrollIntoView(bottomViewAnchorRef.current, { behavior: "smooth" });
-      }}
-    >
+    <div className={cssIntroCard} ref={ref}>
       <div className={cssBottomViewAnchor} ref={bottomViewAnchorRef} />
       <div className={cssSticky}>
         <div className={cssImg}>
@@ -224,7 +218,14 @@ export default function IntroCard({
         </animated.div>
       </div>
       <div className={cssUpIconBlock}>
-        <KeyboardArrowUp />
+        <KeyboardArrowUp
+          role="button"
+          tabIndex={0}
+          onClick={() => {
+            if (!bottomViewAnchorRef.current) return;
+            scrollIntoView(bottomViewAnchorRef.current, { behavior: "smooth" });
+          }}
+        />
       </div>
     </div>
   );
