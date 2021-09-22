@@ -1,5 +1,6 @@
 import { css } from "@emotion/css";
 import A from "@site/src/component/A";
+import useWindowSizeCsr from "@site/src/hook/useWindowSizeCsr";
 import Image from "@theme/IdealImage";
 import type { ReactNode } from "react";
 import { memo, useMemo } from "react";
@@ -44,13 +45,19 @@ export default memo(function Sponsor({
   width,
   area,
 }: SponsorProps) {
+  const [windowWidth] = useWindowSizeCsr();
   const size = useMemo(() => {
-    const ratio = Math.sqrt(area / height / width);
+    const windowRatio = (() => {
+      const ratio = windowWidth / 320;
+      return ratio < 1 ? 1 : ratio > 2 ? 2 : ratio;
+    })();
+
+    const ratio = Math.sqrt(area / height / width) * windowRatio;
     return {
       height: ratio * height,
       width: ratio * width,
     };
-  }, [area, height, width]);
+  }, [area, height, width, windowWidth]);
   return (
     <A href={link} className={cssA}>
       {typeof logo === "string" ? (

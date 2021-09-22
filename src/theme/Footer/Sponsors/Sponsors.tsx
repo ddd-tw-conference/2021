@@ -66,9 +66,9 @@ const cssSponsors = css`
 `;
 
 const size = {
-  silver: 4000,
-  gold: 10000,
-  special: 4000,
+  silver: 1500,
+  gold: 6000,
+  special: 1500,
 };
 
 export default memo(function Sponsors() {
