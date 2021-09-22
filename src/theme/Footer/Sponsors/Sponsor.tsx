@@ -1,11 +1,14 @@
-import { ReactNode } from ".pnpm/@types+react@17.0.11/node_modules/@types/react";
 import { css } from "@emotion/css";
 import A from "@site/src/component/A";
 import Image from "@theme/IdealImage";
+import type { ReactNode } from "react";
 import { memo, useMemo } from "react";
 
 const cssA = css`
   label: A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background-color 0.3s ease, filter 0.3s ease;
   border-radius: 1em;
   padding: 1em;

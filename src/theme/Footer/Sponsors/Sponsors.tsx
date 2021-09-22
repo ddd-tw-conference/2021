@@ -66,9 +66,9 @@ const cssSponsors = css`
 `;
 
 const size = {
-  silver: 7000,
-  gold: 12000,
-  special: 7000,
+  silver: 4000,
+  gold: 10000,
+  special: 4000,
 };
 
 export default memo(function Sponsors() {
@@ -97,6 +97,13 @@ export default memo(function Sponsors() {
           link="https://www.ctbcbank.com/"
           height={143}
           width={500}
+          area={size.silver}
+        />
+        <Sponsor
+          logo={require("!file-loader!./logos/vmware.svg").default}
+          link="https://www.vmware.com/"
+          height={13.049}
+          width={85.673}
           area={size.silver}
         />
         <Sponsor
@@ -137,6 +144,13 @@ export default memo(function Sponsors() {
           area={size.gold}
         />
         <Sponsor
+          logo={require("!file-loader!./logos/softleader.svg").default}
+          link="https://www.softleader.com.tw/"
+          height={58.2}
+          width={200}
+          area={size.gold}
+        />
+        <Sponsor
           logo={require("!file-loader!./logos/aws.svg").default}
           link="https://aws.amazon.com/"
           height={30.024}
@@ -161,10 +175,24 @@ export default memo(function Sponsors() {
         titleIcon={<DiamondIcon />}
       >
         <Sponsor
+          logo={require("!file-loader!./logos/mayo.svg").default}
+          link="https://www.mayohr.com/"
+          height={86.283}
+          width={240.689}
+          area={size.special}
+        />
+        <Sponsor
           logo={require("!file-loader!./logos/jetbrains.svg").default}
           link="https://www.jetbrains.com/"
           height={120.223}
           width={130.104}
+          area={size.special}
+        />
+        <Sponsor
+          logo={require("!file-loader!./logos/ithome.svg").default}
+          link="https://www.ithome.com.tw/"
+          height={40.8}
+          width={192.735}
           area={size.special}
         />
       </Block>
