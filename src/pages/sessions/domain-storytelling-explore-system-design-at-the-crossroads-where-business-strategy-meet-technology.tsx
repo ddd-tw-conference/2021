@@ -6,44 +6,43 @@ import { memo } from "react";
 const i18n: SessionI18n = {
   name: "Domain Storytelling - Explore system design at the crossroads where business strategy meet technology",
   description:
-    "Domain Storytelling is a methodology created by Stefan Hofer and Henning Schwentner. Domain Story is good to help the (development) team in crunching domain knowledge. It has been praised by DDD enthusiasts in these years.",
+    "Domain Storytelling is a technique invented by two software practitioners Stefan Hofer and Henning Schwentner to help the (development) team learn domain knowledge. Domain Storytelling has risen in popularity among DDD enthusiasts in recent years.",
   detail: (
     <>
       <Typography>
+        <em>{"Domain Storytelling"}</em>
         {
-          "Domain Storytelling is a methodology created by Stefan Hofer and Henning Schwentner. Domain Story is good to help the (development) team in crunching domain knowledge. It has been praised by DDD enthusiasts in these years."
+          " is a technique invented by two software practitioners Stefan Hofer and Henning Schwentner to help the (development) team learn domain knowledge. Domain Storytelling has risen in popularity among DDD enthusiasts in recent years."
         }
       </Typography>
       <Typography>
         {
-          "We received high CSAT (4.5,4.6) from communities campaign feedback from DDD Taiwan Conference 2020 and 2021 May meetup for hands-on workshop, so we decided to host the Domain Storytelling workshop for you to well explore domain knowledge conjunction with DDD tactical design."
+          "Since we have received positive feedback in 2020 Conf and the meetup in 2021 May, this time we will take a further step to integrate Domain Storytelling with DDD strategic design and learn more extended applications."
         }
       </Typography>
       <Typography>
-        {"System design is simpler than imagined: start with storytelling!"}
+        {"System design is simpler than expected: start with storytelling!"}
       </Typography>
       <Typography>
-        {`In this workshop, we will first use the "empathy map" to clarify and identify the value of the business from the perspective of the customer, and then learn how to use "Domain Storytelling" to understand the big picture of the business. After that, we can thus make further value selection, finding a problem worth solving, and finally dive deep into the core domain and design your domain model according with "user story map" and  DST to design a suitable solution.`}
+        {`In this workshop, We will first introduce the "Domain Storytelling", and provide a real-world use case for everyone to practice in groups during the workshop to understand the full picture of the business, and then further draw domain boundaries to find problems worth solving and dig deep into core areas. Afterward, we will use the "User Story" and "User Story Mapping" to expand the business requirements and prioritize the requirements. At last, we will use "Example Mapping" to expand the business rules of user stories, and enrich your toolbox by gradually exploring the domain.`}
       </Typography>
       <Typography variant="h5" component="h2">
         {"Takeaway"}
       </Typography>
       <Typography>
-        {"As the exploration of your business, your will experience:"}
+        {"Through the exploration of the business, you will experience:"}
       </Typography>
       <ol>
         <Typography component="li">
-          {
-            "In-depth understanding of customers, digging out the real needs of customers"
-          }
+          {"How to understand the full picture of the business through DST"}
+        </Typography>
+        <Typography component="li">
+          {"How to decide domain boundaries"}
         </Typography>
         <Typography component="li">
           {
-            "Understand the overall picture of the business and make value selection to provide direction for product development"
+            "How to expand business requirements and business rules of your domain"
           }
-        </Typography>
-        <Typography component="li">
-          {"Dive deep into core domains and come up with suitable solutions"}
         </Typography>
       </ol>
     </>
