@@ -89,7 +89,7 @@ export default memo(function Speeches({
             <td colSpan={3}>
               <Item
                 {...session["getting-to-ddd-pragmatic-or-principled"]}
-                time="09:00 ~ 09:40"
+                time="09:00 ~ 09:50"
                 difficulty={difficultyEntry}
               />
             </td>
