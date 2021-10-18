@@ -22,6 +22,16 @@ module.exports = {
     },
   },
   themeConfig: {
+    announcementBar: {
+      id: "conference-2021-outdated",
+      content: [
+        "✨ This is the official site for conference 2021.",
+        'Please checkout more info <a href="https://conference.ddd-tw.com/" rel="noopener noreferrer" target="_blank" style="color: #F012BE;">HERE</a>.',
+      ].join(" "),
+      backgroundColor: "#FFDC00",
+      textColor: "#0074D9",
+      isCloseable: false,
+    },
     image: "img/ogImage.png",
     colorMode: {
       respectPrefersColorScheme: true,
